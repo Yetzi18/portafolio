@@ -13,230 +13,258 @@
 </head>
 <body data-bs-theme="dark">
 
-    <!-- NAVEGACIÓN -->
-    <nav id="barraNavegacion" class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container">
-        <a class="navbar-brand titulo-gotico" href="#inicio">TuNombre</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuCollapsado">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="menuCollapsado">
-            <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
-            <li class="nav-item"><a class="nav-link" href="#sobreMi">Sobre mí</a></li>
-            <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
-            <li class="nav-item"><a class="nav-link" href="#clientes">Clientes</a></li>
-            <li class="nav-item"><a class="nav-link" href="#habilidades">Habilidades</a></li>
-            <li class="nav-item"><a class="nav-link" href="#educacion">Educación</a></li>
-            <li class="nav-item"><a class="nav-link" href="#certificados">Certificados</a></li>
-            <li class="nav-item"><a class="nav-link" href="#experiencia">Experiencia</a></li>
-            <li class="nav-item"><a class="nav-link" href="#referencias">Referencias</a></li>
-            <li class="nav-item"><a class="nav-link" href="#portafolio">Portafolio</a></li>
-            <li class="nav-item"><a class="nav-link" href="#organizaciones">Organizaciones</a></li>
-            <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
-            </ul>
-        </div>
-        </div>
+    <!-- BARRA LATERAL IZQUIERDA -->
+    <nav id="barraLateral" class="d-flex flex-column p-2">
+        <a class="logo mb-3" href="#inicio">
+        <img src="img/nav/logo.png" alt="Logo">
+        </a>
+
+        <!-- Miniaturas con fondo y título -->
+        <a class="miniatura-nav" href="#inicio"
+            style="background-image:url('resource/img/descarga.jfif')"
+            onclick="scrollASeccion(this)">
+            <span>Inicio</span>
+        </a>
+        <a class="miniatura-nav" href="#sobreMi"
+            style="background-image:url('img/nav/sobreMi.jpg')"
+            onclick="scrollASeccion(this)">
+            <span>Sobre mí</span>
+        </a>
+        <a class="miniatura-nav" href="#servicios"
+            style="background-image:url('img/nav/servicios.jpg')"
+            onclick="scrollASeccion(this)">
+            <span>Servicios</span>
+        </a>
+        <a class="miniatura-nav" href="#clientes"
+            style="background-image:url('img/nav/clientes.jpg')"
+            onclick="scrollASeccion(this)">
+            <span>Clientes</span>
+        </a>
+        <a class="miniatura-nav" href="#habilidades"
+            style="background-image:url('img/nav/habilidades.jpg')"
+            onclick="scrollASeccion(this)">
+            <span>Habilidades</span>
+        </a>
+        <a class="miniatura-nav" href="#educacion"
+            style="background-image:url('img/nav/educacion.jpg')"
+            onclick="scrollASeccion(this)">
+            <span>Educación</span>
+        </a>
+        <a class="miniatura-nav" href="#certificados"
+            style="background-image:url('img/nav/certificados.jpg')"
+            onclick="scrollASeccion(this)">
+            <span>Certificados</span>
+        </a>
+        <a class="miniatura-nav" href="#experiencia"
+            style="background-image:url('img/nav/experiencia.jpg')"
+            onclick="scrollASeccion(this)">
+            <span>Experiencia</span>
+        </a>
+        <a class="miniatura-nav" href="#referencias"
+            style="background-image:url('img/nav/referencias.jpg')"
+            onclick="scrollASeccion(this)">
+            <span>Referencias</span>
+        </a>
+        <a class="miniatura-nav" href="#portafolio"
+            style="background-image:url('img/nav/portafolio.jpg')"
+            onclick="scrollASeccion(this)">
+            <span>Portafolio</span>
+        </a>
+        <a class="miniatura-nav" href="#organizaciones"
+            style="background-image:url('img/nav/organizaciones.jpg')"
+            onclick="scrollASeccion(this)">
+            <span>Organizaciones</span>
+        </a>
+        <a class="miniatura-nav" href="#contacto"
+            style="background-image:url('img/nav/contacto.jpg')"
+            onclick="scrollASeccion(this)">
+            <span>Contacto</span>
+        </a>
     </nav>
 
     <!-- HOME -->
     <section id="inicio" class="d-flex align-items-center min-vh-100">
         <div class="container text-center">
-        <h1 class="titulo-gotico display-1">Bienvenid@ a mi mansión</h1>
-        <p class="lead">Diseño y código con un toque de magia oscura.</p>
-        <a href="#sobreMi" class="btn btn-outline-light btn-lg">Descubre mis secretos</a>
+            <h1 class="titulo display-1">Bienvenid@</h1>
+            <p class="lead">Diseño y código con un toque de magia oscura.</p>
+            <a href="#sobreMi" class="btn btn-outline-light btn-lg">Descubre mis secretos</a>
         </div>
     </section>
 
     <!-- ABOUT -->
     <section id="sobreMi" class="py-5">
         <div class="container">
-        <div class="row align-items-center">
-            <div class="col-md-6">
-            <img src="img/avatar.png" alt="Ilustración gotica" class="img-fluid rounded-circle borde-inquietante">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <img src="img/avatar.png" alt="Ilustración gotica" class="img-fluid rounded-circle borde-inquietante">
+                </div>
+                <div class="col-md-6">
+                    <h2 class="titulo">Sobre mí</h2>
+                    <p>Soy una apasionada del desarrollo web con alma de cuento. Me encanta crear experiencias inmersivas que combinen estética y funcionalidad. Mi pasa tiempo es el crochet y ver películas o series.</p>
+                </div>
             </div>
-            <div class="col-md-6">
-            <h2 class="titulo-gotico">Sobre mí</h2>
-            <p>Soy una apasionada del desarrollo web con alma de cuento. Me encanta crear experiencias inmersivas que combinen estética y funcionalidad. Cuando no estoy codeando, dibujo en mi cuaderno de bocetos o veo películas de Tim Burton.</p>
-            </div>
-        </div>
         </div>
     </section>
 
     <!-- SERVICIOS -->
-    <section id="servicios" class="py-5 bg-black-50">
+    <section id="servicios" class="seccion fondo-servicios py-5">
         <div class="container">
-        <h2 class="titulo-gotico text-center mb-4">Servicios</h2>
-        <div class="row g-4">
-            <div class="col-md-4">
-            <div class="card h-100 tarjeta-oscura">
-                <div class="card-body">
-                <h5 class="card-title">Diseño UI/UX oscuro</h5>
-                <p class="card-text">Interfaces que cuentan historias.</p>
+            <h2 class="titulo text-center mb-4">Servicios</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 tarjeta-oscura">
+                        <div class="card-body">
+                            <h5 class="card-title">Diseño UI/UX</h5>
+                            <p class="card-text">Interfaces que cuentan historias.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 tarjeta-oscura">
+                        <div class="card-body">
+                            <h5 class="card-title">Front-End con Bootstrap</h5>
+                            <p class="card-text">Sitios responsivos y accesibles.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 tarjeta-oscura">
+                        <div class="card-body">
+                            <h5 class="card-title">Integración con GitHub Pages</h5>
+                            <p class="card-text">Despliegue rápido y gratuito.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            </div>
-            <div class="col-md-4">
-            <div class="card h-100 tarjeta-oscura">
-                <div class="card-body">
-                <h5 class="card-title">Front-End con Bootstrap</h5>
-                <p class="card-text">Sitios responsivos y accesibles.</p>
-                </div>
-            </div>
-            </div>
-            <div class="col-md-4">
-            <div class="card h-100 tarjeta-oscura">
-                <div class="card-body">
-                <h5 class="card-title">Integración con GitHub Pages</h5>
-                <p class="card-text">Despliegue rápido y gratuito.</p>
-                </div>
-            </div>
-            </div>
-        </div>
         </div>
     </section>
 
-    <!-- CLIENTES -->
-    <section id="clientes" class="py-5">
-        <div class="container text-center">
-        <h2 class="titulo-gotico mb-4">Clientes & Colaboraciones</h2>
-        <div class="row justify-content-center">
-            <div class="col-4 col-md-2 mb-3">
-            <img src="img/logos/logo1.png" alt="Cliente 1" class="img-fluid logo-cliente">
-            </div>
-            <div class="col-4 col-md-2 mb-3">
-            <img src="img/logos/logo2.png" alt="Cliente 2" class="img-fluid logo-cliente">
-            </div>
-            <!-- Agrega más según necesites -->
-        </div>
-        </div>
-    </section>
 
     <!-- HABILIDADES -->
-    <section id="habilidades" class="py-5 bg-black-50">
+    <section section id="habilidades" class="seccion fondo-habilidades py-5">
         <div class="container">
-        <h2 class="titulo-gotico text-center mb-4">Habilidades</h2>
-        <div class="row">
-            <div class="col-md-6">
-            <h5>Técnicas</h5>
-            <ul class="lista-habilidades">
-                <li onmouseover="resaltarHabilidad(this)" onmouseout="restaurarHabilidad(this)">HTML5</li>
-                <li onmouseover="resaltarHabilidad(this)" onmouseout="restaurarHabilidad(this)">CSS3 / Flexbox</li>
-                <li onmouseover="resaltarHabilidad(this)" onmouseout="restaurarHabilidad(this)">JavaScript ES6</li>
-                <li onmouseover="resaltarHabilidad(this)" onmouseout="restaurarHabilidad(this)">Bootstrap 5</li>
-                <li onmouseover="resaltarHabilidad(this)" onmouseout="restaurarHabilidad(this)">Git & GitHub</li>
-            </ul>
+            <h2 class="titulo text-center mb-4">Habilidades</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Técnicas</h5>
+                    <ul class="lista-habilidades">
+                        <li onmouseover="resaltarHabilidad(this)" onmouseout="restaurarHabilidad(this)">HTML5</li>
+                        <li onmouseover="resaltarHabilidad(this)" onmouseout="restaurarHabilidad(this)">CSS3 / Flexbox</li>
+                        <li onmouseover="resaltarHabilidad(this)" onmouseout="restaurarHabilidad(this)">JavaScript ES6</li>
+                        <li onmouseover="resaltarHabilidad(this)" onmouseout="restaurarHabilidad(this)">Bootstrap 5</li>
+                        <li onmouseover="resaltarHabilidad(this)" onmouseout="restaurarHabilidad(this)">Git & GitHub</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h5>Blandas</h5>
+                    <ul class="lista-habilidades">
+                        <li onmouseover="resaltarHabilidad(this)" onmouseout="restaurarHabilidad(this)">Creatividad</li>
+                        <li onmouseover="resaltarHabilidad(this)" onmouseout="restaurarHabilidad(this)">Trabajo en equipo</li>
+                        <li onmouseover="resaltarHabilidad(this)" onmouseout="restaurarHabilidad(this)">Comunicación</li>
+                        <li onmouseover="resaltarHabilidad(this)" onmouseout="restaurarHabilidad(this)">Pensamiento crítico</li>
+                    </ul>
+                </div>
             </div>
-            <div class="col-md-6">
-            <h5>Blandas</h5>
-            <ul class="lista-habilidades">
-                <li onmouseover="resaltarHabilidad(this)" onmouseout="restaurarHabilidad(this)">Creatividad</li>
-                <li onmouseover="resaltarHabilidad(this)" onmouseout="restaurarHabilidad(this)">Trabajo en equipo</li>
-                <li onmouseover="resaltarHabilidad(this)" onmouseout="restaurarHabilidad(this)">Comunicación</li>
-                <li onmouseover="resaltarHabilidad(this)" onmouseout="restaurarHabilidad(this)">Pensamiento crítico</li>
-            </ul>
-            </div>
-        </div>
         </div>
     </section>
 
     <!-- EDUCACIÓN -->
-    <section id="educacion" class="py-5">
+    <section id="educacion" class="seccion fondo-educacion py-5">
         <div class="container">
-        <h2 class="titulo-gotico text-center mb-4">Educación</h2>
-        <ul class="timeline">
-            <li>
-            <h5>Liceo Comercial Vate Vicente Huidobro</h5>
-            <p>Enseñanza Media, 2024-2025</p>
-            </li>
-            <li>
-            <h5>Alternancia Inacap</h5>
-            <p>2025</p>
-            </li>
-        </ul>
+            <h2 class="titulo text-center mb-4">Educación</h2>
+            <ul class="timeline">
+                <li>
+                <h5>Liceo Comercial Vate Vicente Huidobro</h5>
+                <p>Enseñanza Media, 2024-2025</p>
+                </li>
+                <li>
+                <h5>Alternancia Inacap</h5>
+                <p>2025</p>
+                </li>
+            </ul>
         </div>
     </section>
 
     <!-- CERTIFICADOS -->
-    <section id="certificados" class="py-5 bg-black-50">
+    <section id="certificados" class="seccion fondo-certificados py-5">
         <div class="container">
-        <h2 class="titulo-gotico text-center mb-4">Certificaciones</h2>
-        <div class="row g-3">
-            <div class="col-md-4">
-            <div class="card tarjeta-oscura">
-                <div class="card-body">
-                <h6>Responsive Web Design</h6>
-                <small>freeCodeCamp – 2023</small>
+            <h2 class="titulo text-center mb-4">Certificaciones</h2>
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <div class="card tarjeta-oscura">
+                        <div class="card-body">
+                            <h6>Responsive Web Design</h6>
+                            <small>freeCodeCamp – 2023</small>
+                        </div>
+                    </div>
                 </div>
             </div>
-            </div>
-        </div>
         </div>
     </section>
 
     <!-- EXPERIENCIA -->
-    <section id="experiencia" class="py-5">
+    <section id="experiencia" class="seccion fondo-experiencia py-5">
         <div class="container">
-        <h2 class="titulo-gotico text-center mb-4">Experiencia</h2>
-        <div class="row">
-            <div class="col-md-6">
-            <h5>Práctica Profesional – MiniTienda Online</h5>
-            <p>Desarrollo front-end con Bootstrap y JS. 2023</p>
+            <h2 class="titulo text-center mb-4">Experiencia</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Práctica Profesional – MiniTienda Online</h5>
+                    <p>Desarrollo front-end con Bootstrap y JS. 2023</p>
+                </div>
             </div>
-        </div>
         </div>
     </section>
 
     <!-- REFERENCIAS -->
-    <section id="referencias" class="py-5 bg-black-50">
+    <section id="referencias" class="seccion fondo-referencias py-5">
         <div class="container">
-        <h2 class="titulo-gotico text-center mb-4">Referencias</h2>
-        <p class="text-center">Disponibles bajo petición. Contacta conmigo.</p>
+            <h2 class="titulo text-center mb-4">Referencias</h2>
+            <p class="text-center">Disponibles bajo petición. Contacta conmigo.</p>
         </div>
     </section>
 
     <!-- PORTAFOLIO -->
-    <section id="portafolio" class="py-5">
+    <section id="portafolio" class="seccion fondo-portafolio py-5">
         <div class="container">
-        <h2 class="titulo-gotico text-center mb-4">Portafolio</h2>
-        <div class="row g-4" id="grillaProyectos">
-            <!-- JS insertará tarjetas -->
-        </div>
+            <h2 class="titulo text-center mb-4">Portafolio</h2>
+            <div class="row g-4" id="grillaProyectos">
+                <!-- JS insertará tarjetas -->
+            </div>
         </div>
     </section>
 
 
     <!-- CONTACTO -->
-    <section id="contacto" class="py-5">
+    <section id="contacto" class="seccion fondo-contacto py-5">
         <div class="container">
-        <h2 class="titulo-gotico text-center mb-4">Contacto</h2>
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-            <form id="formularioContacto" onchange="validarFormulario(this)">
-                <div class="mb-3">
-                <label for="nombre" class="form-label">Nombre</label>
-                <input type="text" class="form-control" id="nombre" required>
+            <h2 class="titulo text-center mb-4">Contacto</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <form id="formularioContacto" onchange="validarFormulario(this)">
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="nombre" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="correo" class="form-label">Correo</label>
+                            <input type="email" class="form-control" id="correo" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="mensaje" class="form-label">Mensaje</label>
+                            <textarea class="form-control" id="mensaje" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-outline-light">Enviar</button>
+                    </form>
                 </div>
-                <div class="mb-3">
-                <label for="correo" class="form-label">Correo</label>
-                <input type="email" class="form-control" id="correo" required>
-                </div>
-                <div class="mb-3">
-                <label for="mensaje" class="form-label">Mensaje</label>
-                <textarea class="form-control" id="mensaje" rows="4" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-outline-light">Enviar</button>
-            </form>
             </div>
-        </div>
-        <div class="text-center mt-4">
-            <a href="https://github.com/TuUsuario" target="_blank" class="me-3">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="32" alt="GitHub">
-            </a>
-            <a href="mailto:tu@correo.com">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" width="32" alt="Mail">
-            </a>
-        </div>
+            <div class="text-center mt-4">
+                <a href="https://github.com/TuUsuario" target="_blank" class="me-3">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="32" alt="GitHub">
+                </a>
+                <a href="mailto:tu@correo.com">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" width="32" alt="Mail">
+                </a>
+            </div>
         </div>
     </section>
 

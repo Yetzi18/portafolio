@@ -1,150 +1,126 @@
-* {
-    padding: 0;
-    margin: 0;
-    /* outline: solid 1px red;  */
-}
-
-:root{
-    --color-fondo: #0b0b0b;
-    --color-primario: #8a2be2;   /* violeta fantasma */
-    --color-secundario: #ff1493; /* rosa neón */
-    --fuente-gotica: 'Creepster', cursive;
-    --fuente-cuerpo: 'Quicksand', sans-serif;
-}
-
-/* ---------- RESET ---------- */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 body{
-    background: var(--color-fondo);
+    display: flex;
+    min-height: 100vh;
+    background: #0b0b0b;
     color: #f5f5f5;
-    font-family: var(--fuente-cuerpo);
-    scroll-behavior: smooth;
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+}
+#barraLateral{
+    width: 200px;
+    height: 100vh;
+    position: fixed;
+    top: 0; left: 0;
+    background: #000;
+    border-right: 2px solid #8a2be2;
+    overflow-y: auto;
+    z-index: 1050;
+}
+#contenidoPrincipal{
+    margin-left: 200px;
+    width: calc(100% - 200px);
 }
 
-/* ---------- TIPOGRAFÍA ---------- */
-.titulo-gotico{
-    font-family: var(--fuente-gotica);
-    color: var(--color-primario);
-    text-shadow: 2px 2px 5px rgba(0,0,0,.8);
-}
-
-/* ---------- NAVEGACIÓN ---------- */
-#barraNavegacion{
-    background: rgba(11,11,11,.85);
-    backdrop-filter: blur(8px);
-    border-bottom: 1px solid var(--color-primario);
-}
-.navbar-nav .nav-link{
+/* ---------- MINIATURAS NAV ---------- */
+.miniatura-nav{
+    display: block;
+    height: 70px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    background-size: cover;
+    background-position: center;
+    text-decoration: none;
     position: relative;
-    transition: color .3s;
+    overflow: hidden;
+    transition: transform .3s, box-shadow .3s;
 }
-.navbar-nav .nav-link::after{
-    content: '';
-    position: absolute;
-    left: 0; bottom: -2px;
-    width: 0; height: 2px;
-    background: var(--color-secundario);
-    transition: width .3s;
-}
-.navbar-nav .nav-link:hover::after,
-.navbar-nav .nav-link.active::after{
-    width: 100%;
-}
-
-/* ---------- HOME ---------- */
-#inicio{
-    background: url('../img/hero-bg.jpg') center/cover no-repeat;
-    position: relative;
-}
-#inicio::before{
-    content: '';
+.miniatura-nav span{
     position: absolute;
     inset: 0;
     background: rgba(0,0,0,.55);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: .95rem;
+    text-align: center;
+    padding: 4px;
 }
-#inicio .container{
+.miniatura-nav:hover{
+    transform: scale(1.03);
+    box-shadow: 0 0 15px #8a2be2;
+}
+
+/* ---------- SECCIONES CON FONDOS ÚNICOS ---------- */
+.seccion{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
-    z-index: 2;
+}
+.fondo-inicio{
+    background: url('../img/bg/inicio.jpg') center/cover no-repeat;
+}
+.fondo-sobreMi{
+    background: linear-gradient(135deg, #1c0b1f 0%, #0b0b0b 100%);
+}
+.fondo-servicios{
+    background: url('../img/bg/servicios.png') center/cover no-repeat;
+}
+.fondo-clientes{
+    background: #111318;
+}
+.fondo-habilidades{
+    background: url('../img/bg/habilidades.jpg') center/cover no-repeat;
+}
+.fondo-educacion{
+    background: linear-gradient(180deg, #2d1b33 0%, #000 100%);
+}
+.fondo-certificados{
+    background: #0d0d12;
+}
+.fondo-experiencia{
+    background: url('../img/bg/experiencia.jpg') center/cover no-repeat;
+}
+.fondo-referencias{
+    background: #1a1a1d;
+}
+.fondo-portafolio{
+    background: url('../img/bg/portafolio.jpg') center/cover no-repeat;
+}
+.fondo-organizaciones{
+    background: #161616;
+}
+.fondo-contacto{
+    background: url('../img/bg/contacto.jpg') center/cover no-repeat;
 }
 
-/* ---------- ABOUT ---------- */
-.borde-inquietante{
-    border: 3px solid var(--color-primario);
-    box-shadow: 0 0 20px var(--color-primario);
-    transition: transform .4s;
+/* ---------- COSAS QUE YA TENÍAS ---------- */
+.titulo-gotico{
+    font-family: 'Creepster', cursive;
+    color: #8a2be2;
+    text-shadow: 2px 2px 8px #000;
 }
-.borde-inquietante:hover{
-    transform: scale(1.05) rotate(-2deg);
-}
-
-/* ---------- CARDS ---------- */
 .tarjeta-oscura{
-    background: #111;
-    border: 1px solid var(--color-primario);
-    transition: transform .3s, box-shadow .3s;
-}
-.tarjeta-oscura:hover{
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(138,43,226,.5);
-}
-
-/* ---------- HABILIDADES ---------- */
-.lista-habilidades{
-    list-style: none;
-}
-.lista-habilidades li{
-    padding: .4rem 0;
-    border-left: 3px solid var(--color-secundario);
-    padding-left: .8rem;
-    margin-bottom: .5rem;
-    transition: color .3s, border-color .3s;
-}
-
-/* ---------- TIMELINE ---------- */
-.timeline{
-    border-left: 2px solid var(--color-primario);
-    padding-left: 1.5rem;
-    margin-left: 1rem;
-}
-.timeline li{
-    margin-bottom: 1.5rem;
-    position: relative;
-}
-.timeline li::before{
-    content: '';
-    position: absolute;
-    left: -2.15rem; top: .3rem;
-    width: 12px; height: 12px;
-    border-radius: 50%;
-    background: var(--color-secundario);
-}
-
-/* ---------- LOGOS CLIENTES ---------- */
-.logo-cliente{
-    filter: grayscale(1) invert(.8);
-    transition: filter .3s, transform .3s;
-}
-.logo-cliente:hover{
-    filter: grayscale(0) invert(0);
-    transform: scale(1.1);
-}
-
-/* ---------- FOOTER ---------- */
-footer{
-    border-top: 1px solid var(--color-primario);
+    background: rgba(17,17,17,.75);
+    backdrop-filter: blur(6px);
+    border: 1px solid #8a2be2;
 }
 
 /* ---------- RESPONSIVE ---------- */
 @media (max-width: 768px){
-    .titulo-gotico{
-        font-size: 2.2rem;
+    #barraLateral{
+        transform: translateX(-100%);
+        transition: transform .3s;
     }
-    #inicio{
-        background-attachment: scroll;
+    #barraLateral.activa{
+        transform: translateX(0);
+    }
+    #contenidoPrincipal{
+        margin-left: 0;
+        width: 100%;
     }
 }

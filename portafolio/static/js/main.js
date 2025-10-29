@@ -7,18 +7,33 @@ Autora: TuNombre
 document.getElementById('yearActual').textContent = new Date().getFullYear();
 
 // ---------- NAVEGACIÓN ACTIVA ----------
-window.addEventListener('scroll', () => {
-    let secciones = document.querySelectorAll('section');
-    let enlaces = document.querySelectorAll('.navbar-nav .nav-link');
-    let scrollActual = window.pageYOffset + 100;
+// window.addEventListener('scroll', () => {
+//     let secciones = document.querySelectorAll('section');
+//     let enlaces = document.querySelectorAll('.navbar-nav .nav-link');
+//     let scrollActual = window.pageYOffset + 100;
 
-    secciones.forEach((sec, idx) => {
-        if(scrollActual >= sec.offsetTop && scrollActual < sec.offsetTop + sec.offsetHeight){
-        enlaces.forEach(link => link.classList.remove('active'));
-        if(enlaces[idx]) enlaces[idx].classList.add('active');
-        }
-    });
-});
+//     secciones.forEach((sec, idx) => {
+//         if(scrollActual >= sec.offsetTop && scrollActual < sec.offsetTop + sec.offsetHeight){
+//         enlaces.forEach(link => link.classList.remove('active'));
+//         if(enlaces[idx]) enlaces[idx].classList.add('active');
+//         }
+//     });
+// });
+
+// ---------- SCROLL SUAVE + COMPENSAR BARRA LATERAL ----------
+function scrollASeccion(enlace) {
+    enlace.addEventListener('click', e => e.preventDefault());
+    const objetivo = document.querySelector(enlace.getAttribute('href'));
+    if (objetivo) {
+        const alturaBarra = 200; // mismo ancho que la barra lateral
+        const posicion = objetivo.offsetTop - 20; // pequeño margen superior
+        window.scrollTo({ top: posicion, behavior: 'smooth' });
+    }
+    // Cerrar barra en móvil
+    if (window.innerWidth <= 768) {
+        document.getElementById('barraLateral').classList.remove('activa');
+    }
+}
 
 // ---------- HABILIDADES HOVER ----------
 function resaltarHabilidad(elemento){

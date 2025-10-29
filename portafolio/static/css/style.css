@@ -68,7 +68,7 @@ body{
     background: linear-gradient(135deg, #1c0b1f 0%, #0b0b0b 100%);
 }
 .fondo-servicios{
-    background: url('../img/bg/servicios.png') center/cover no-repeat;
+    background: url('../img/bg/servicios.pn') center/cover no-repeat;
 }
 .fondo-clientes{
     background: #111318;
@@ -98,7 +98,7 @@ body{
     background: url('../img/bg/contacto.jpg') center/cover no-repeat;
 }
 
-/* ---------- COSAS QUE YA TENÍAS ---------- */
+
 .titulo-gotico{
     font-family: 'Creepster', cursive;
     color: #8a2be2;

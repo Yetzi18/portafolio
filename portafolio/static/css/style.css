@@ -70,43 +70,49 @@ main {
     justify-content: center;
     position: relative;
 }
-.fondo-inicio{
-    background: url('../resources/img/flor.jpg') center/cover no-repeat;
-}
-.fondo-sobreMi{
-    background: linear-gradient(135deg, #1c0b1f 0%, #0b0b0b 100%);
-}
-.fondo-servicios{
-    background: url('../img/bg/servicios.pn') center/cover no-repeat;
-}
-.fondo-clientes{
-    background: #111318;
-}
-.fondo-habilidades{
-    background: url('../img/bg/habilidades.jpg') center/cover no-repeat;
-}
-.fondo-educacion{
-    background: linear-gradient(180deg, #2d1b33 0%, #000 100%);
-}
-.fondo-certificados{
-    background: #0d0d12;
-}
-.fondo-experiencia{
-    background: url('../img/bg/experiencia.jpg') center/cover no-repeat;
-}
-.fondo-referencias{
-    background: #1a1a1d;
-}
-.fondo-portafolio{
-    background: url('../img/bg/portafolio.jpg') center/cover no-repeat;
-}
-.fondo-organizaciones{
-    background: #161616;
-}
-.fondo-contacto{
-    background: url('../img/bg/contacto.jpg') center/cover no-repeat;
+
+/* ---------- FONDO PORTAFOLIO ANIMADO ----------
+.fondo-servicios {
+    background: linear-gradient(-45deg, #000000, #2c0101, #3f0f0f, #ffffff);
+    background-size: 400% 400%;
+    animation: portafolioRespira 12s ease infinite;
+    position: relative;
+    overflow: hidden;
 }
 
+/* Ondas de luz blanca que se mueven */
+/* .fondo-servicios::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 60%);
+    animation: ondaBlanca 8s linear infinite;
+    z-index: 0;
+} */
+
+/* Contenido por encima del fondo */
+/* .fondo-servicios .container {
+    position: relative;
+    z-index: 1;
+} */
+
+/* Animaciones */
+/* @keyframes portafolioRespira {
+    0%   { background-position: 0% 50%; }
+    25%  { background-position: 100% 50%; }
+    50%  { background-position: 100% 100%; }
+    75%  { background-position: 0% 100%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes ondaBlanca {
+    0%   { transform: rotate(0deg)   scale(1); opacity: 0.3; }
+    50%  { transform: rotate(180deg) scale(1.2); opacity: 0.1; }
+    100% { transform: rotate(360deg) scale(1); opacity: 0.3; }
+} */ 
 
 .titulo-gotico{
     font-family: 'Creepster', cursive;
@@ -165,4 +171,116 @@ main {
         width: 100vw;
         margin-left: 0;
     }
+}
+
+/* ========== ANIMACIÓN SCROLL-TIMELINE ========== */
+/* Capas (opcional, pero mantiene orden) */
+@layer base, rhythm, layout, components, default, overwrites;
+
+/* ------ VARIABLES DE COLOR (ajusta a tu paleta) ------ */
+:root{
+    --color-background: #0b0b0b;
+    --color-primary   : #8a2be2;   /* morado */
+    --color-secondary : #ff1493;   /* rosa neón */
+    --color-yellow    : #f9f871;
+    --color-red       : #e84545;
+    --color-purple    : #6a097d;
+    --indicator-size        : 12px;
+    --indicator-total-height: 200px;
+}
+
+/* ------ SNAPPING Y TIMELINES ------ */
+html{
+    scroll-snap-type: y mandatory;
+    timeline-scope  : --section, --main, --site-header;
+}
+
+main{                       /* envuelve todas tus .seccion */
+    view-timeline: --main;
+}
+
+.seccion{                   /* tu clase actual */
+    scroll-snap-align: start;
+    scroll-snap-stop : always;
+    view-timeline    : --section;
+    height           : 100dvh;
+    position         : relative;
+}
+
+/* ------ CONTENIDO QUE SE "PARPADEA" ------ */
+.content{                   /* pon esta clase DENTRO de cada .seccion */
+    position: fixed;
+    inset   : 0;
+    overflow: hidden;
+    z-index : 1;
+
+    --contrast: 4;
+    --blur    : 0.5rem;
+
+    animation: blink ease-in-out both;
+    animation-timeline: --section;
+}
+
+@keyframes blink{
+    0%, 100%{
+        filter: blur(var(--blur)) contrast(var(--contrast));
+        opacity   : 0;
+        visibility: hidden;
+    }
+    50%{
+        filter: blur(0) contrast(1);
+        opacity   : 1;
+        visibility: visible;
+    }
+}
+
+/* ------ INDICADOR LATERAL (opcional) ------ */
+.indicator::before{
+    content          : '';
+    position         : absolute;
+    width            : var(--indicator-size);
+    height           : var(--indicator-size);
+    border-radius    : 50%;
+    background       : var(--color-indicator, var(--color-primary));
+    animation        : indicate linear both;
+    animation-timeline: --main;
+    animation-range  : contain;
+}
+
+@keyframes indicate{
+    0%   { transform: translateY(0);      --color-indicator: var(--color-primary);   }
+    25%  {                                --color-indicator: var(--color-yellow);    }
+    50%  {                                --color-indicator: var(--color-secondary); }
+    75%  {                                --color-indicator: var(--color-red);       }
+    100% { transform: translateY(var(--indicator-total-height)); --color-indicator: var(--color-purple); }
+}
+
+/* ------ ALTERNATIVAS DE ANIMACIÓN (con radios ocultos) ------ */
+/* Pon estos inputs HIDDEN en tu HTML si quieres cambiar dinámicamente:
+    <input type="radio" name="fx" value="horizontal-scroll" hidden>
+*/
+body:has([value="horizontal-scroll"]:checked) .content{
+    animation: horizontal-scroll ease-in-out both;
+}
+body:has([value="backwards-scroll"]:checked) .content{
+    animation: backwards-scroll ease-in-out both;
+}
+body:has([value="zoom-scroll"]:checked) .content{
+    animation: zoom-scroll ease-in-out both;
+}
+
+@keyframes horizontal-scroll{
+    0%  { transform: translate3d(100%, 0, 0); }
+    50% { transform: none; }
+    100%{ transform: translate3d(-100%, 0, 0); }
+}
+@keyframes backwards-scroll{
+    0%  { transform: translate3d(0, -100%, 0); }
+    50% { transform: none; }
+    100%{ transform: translate3d(0, 100%, 0); }
+}
+@keyframes zoom-scroll{
+    0%  { filter: blur(5rem); transform: scale(0);   opacity: 0; visibility: hidden; }
+    50% { filter: blur(0);   transform: scale(1);   opacity: 1; visibility: visible; }
+    100%{ filter: blur(3rem); transform: scale(1.5); opacity: 0; visibility: hidden; }
 }

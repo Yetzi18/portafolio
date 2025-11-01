@@ -1,8 +1,8 @@
-
 * {
     margin: 0;
     padding: 0;
 }
+
 body{
     display: flex;
     flex-direction: column;
@@ -14,6 +14,10 @@ body{
 }
 main {
     flex: 1;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 #barraLateral{
@@ -71,8 +75,8 @@ main {
     position: relative;
 }
 
-/* ---------- FONDO PORTAFOLIO ANIMADO ----------
-.fondo-servicios {
+/* ---------- FONDO PORTAFOLIO ANIMADO ---------- */
+.fondo-animado {
     background: linear-gradient(-45deg, #000000, #2c0101, #3f0f0f, #ffffff);
     background-size: 400% 400%;
     animation: portafolioRespira 12s ease infinite;
@@ -81,7 +85,7 @@ main {
 }
 
 /* Ondas de luz blanca que se mueven */
-/* .fondo-servicios::before {
+.fondo-animado::before {
     content: '';
     position: absolute;
     top: -50%;
@@ -91,16 +95,16 @@ main {
     background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 60%);
     animation: ondaBlanca 8s linear infinite;
     z-index: 0;
-} */
+}
 
 /* Contenido por encima del fondo */
-/* .fondo-servicios .container {
+.fondo-animado .container {
     position: relative;
     z-index: 1;
-} */
+}
 
 /* Animaciones */
-/* @keyframes portafolioRespira {
+@keyframes portafolioRespira {
     0%   { background-position: 0% 50%; }
     25%  { background-position: 100% 50%; }
     50%  { background-position: 100% 100%; }
@@ -112,17 +116,32 @@ main {
     0%   { transform: rotate(0deg)   scale(1); opacity: 0.3; }
     50%  { transform: rotate(180deg) scale(1.2); opacity: 0.1; }
     100% { transform: rotate(360deg) scale(1); opacity: 0.3; }
-} */ 
-
-.titulo-gotico{
+}
+/* ---------- COSAS QUE YA TENÍAS ---------- */
+.titulo{
     font-family: 'Creepster', cursive;
-    color: #8a2be2;
+    color: #e5e5e5;
     text-shadow: 2px 2px 8px #000;
 }
 .tarjeta-oscura{
     background: rgba(17,17,17,.75);
     backdrop-filter: blur(6px);
     border: 1px solid #8a2be2;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px){
+    #barraLateral{
+        transform: translateX(-100%);
+        transition: transform .3s;
+    }
+    #barraLateral.activa{
+        transform: translateX(0);
+    }
+    #contenidoPrincipal{
+        margin-left: 0;
+        width: 100%;
+    }
 }
 
 .foto-perfil {
@@ -139,19 +158,10 @@ main {
     transform: scale(1.08) rotate(-3deg);
 }
 
-/* ---------- RESPONSIVE ---------- */
-@media (max-width: 768px){
-    #barraLateral{
-        transform: translateX(-100%);
-        transition: transform .3s;
-    }
-    #barraLateral.activa{
-        transform: translateX(0);
-    }
-    #contenidoPrincipal{
-        margin-left: 0;
-        width: 100%;
-    }
+.foto-perfil,
+.btn-scroll {
+    position: relative;
+    z-index: 2; /* más alto que las manchas */
 }
 
 .mi-footer {
@@ -173,114 +183,260 @@ main {
     }
 }
 
-/* ========== ANIMACIÓN SCROLL-TIMELINE ========== */
-/* Capas (opcional, pero mantiene orden) */
-@layer base, rhythm, layout, components, default, overwrites;
-
-/* ------ VARIABLES DE COLOR (ajusta a tu paleta) ------ */
-:root{
-    --color-background: #0b0b0b;
-    --color-primary   : #8a2be2;   /* morado */
-    --color-secondary : #ff1493;   /* rosa neón */
-    --color-yellow    : #f9f871;
-    --color-red       : #e84545;
-    --color-purple    : #6a097d;
-    --indicator-size        : 12px;
-    --indicator-total-height: 200px;
+/*---------------------------------------------------------------------*/
+/* ---------- FONDO TINTA GÓTICA (SIN TAPAR CONTENIDO) ---------- */
+.contenido-superior {
+    position: relative;
+    z-index: 1; /* SIEMPRE por encima de las manchas */
 }
 
-/* ------ SNAPPING Y TIMELINES ------ */
-html{
-    scroll-snap-type: y mandatory;
-    timeline-scope  : --section, --main, --site-header;
-}
-
-main{                       /* envuelve todas tus .seccion */
-    view-timeline: --main;
-}
-
-.seccion{                   /* tu clase actual */
-    scroll-snap-align: start;
-    scroll-snap-stop : always;
-    view-timeline    : --section;
-    height           : 100dvh;
-    position         : relative;
-}
-
-/* ------ CONTENIDO QUE SE "PARPADEA" ------ */
-.content{                   /* pon esta clase DENTRO de cada .seccion */
-    position: fixed;
-    inset   : 0;
+.fondo-tinta {
+    background: #0a0a0a;
+    position: relative;
     overflow: hidden;
-    z-index : 1;
-
-    --contrast: 4;
-    --blur    : 0.5rem;
-
-    animation: blink ease-in-out both;
-    animation-timeline: --section;
 }
 
-@keyframes blink{
-    0%, 100%{
-        filter: blur(var(--blur)) contrast(var(--contrast));
-        opacity   : 0;
-        visibility: hidden;
+.fondo-tinta::before,
+.fondo-tinta::after {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    background: radial-gradient(
+        ellipse at center,
+        rgba(138, 43, 226, 0.08) 0%,
+        transparent 50%
+    );
+    animation: tintaGotea 10s ease-in-out infinite;
+    transform-origin: center;
+    z-index: 0; /* ¡DEBAJA del contenido! */
+}
+
+.fondo-tinta::after {
+    animation-delay: 5s;
+    transform: rotate(45deg);
+}
+
+@keyframes tintaGotea {
+    0%, 100% {
+        transform: scale(0.8) translateY(0);
+        opacity: 0.2;
     }
-    50%{
-        filter: blur(0) contrast(1);
-        opacity   : 1;
-        visibility: visible;
+    50% {
+        transform: scale(1.2) translateY(20px);
+        opacity: 0.6;
     }
 }
 
-/* ------ INDICADOR LATERAL (opcional) ------ */
-.indicator::before{
-    content          : '';
-    position         : absolute;
-    width            : var(--indicator-size);
-    height           : var(--indicator-size);
-    border-radius    : 50%;
-    background       : var(--color-indicator, var(--color-primary));
-    animation        : indicate linear both;
-    animation-timeline: --main;
-    animation-range  : contain;
+/*SECCIONES ESTILOS DIFERENTES*/
+
+/* ---------- TARJETA SOBRE MÍ ---------- */
+.card_sobremi {
+    background-color: #180000;              
+    border: 1px solid #791b1b;         
+    border-radius: 10px 30px 60px 120px;
+    padding: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 0 25px #e22b4340;
+    color: #f5f5f5;                    
+    font-family: 'Quicksand', sans-serif;
+    line-height: 1.7;
+    position: relative;
+    overflow: hidden;
 }
 
-@keyframes indicate{
-    0%   { transform: translateY(0);      --color-indicator: var(--color-primary);   }
-    25%  {                                --color-indicator: var(--color-yellow);    }
-    50%  {                                --color-indicator: var(--color-secondary); }
-    75%  {                                --color-indicator: var(--color-red);       }
-    100% { transform: translateY(var(--indicator-total-height)); --color-indicator: var(--color-purple); }
+/* Ribete superior brillante */
+.card_sobremi::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #791b1b, #e22b4340, #791b1b);
+    animation: brilloRibete 4s linear infinite;
 }
 
-/* ------ ALTERNATIVAS DE ANIMACIÓN (con radios ocultos) ------ */
-/* Pon estos inputs HIDDEN en tu HTML si quieres cambiar dinámicamente:
-    <input type="radio" name="fx" value="horizontal-scroll" hidden>
-*/
-body:has([value="horizontal-scroll"]:checked) .content{
-    animation: horizontal-scroll ease-in-out both;
-}
-body:has([value="backwards-scroll"]:checked) .content{
-    animation: backwards-scroll ease-in-out both;
-}
-body:has([value="zoom-scroll"]:checked) .content{
-    animation: zoom-scroll ease-in-out both;
+@keyframes brilloRibete {
+    0%   { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
 }
 
-@keyframes horizontal-scroll{
-    0%  { transform: translate3d(100%, 0, 0); }
-    50% { transform: none; }
-    100%{ transform: translate3d(-100%, 0, 0); }
+/* Resaltes morados en líneas clave */
+.card_sobremi b {
+    color: #c5a3ff;   /* morado suave */
+    font-weight: 600;
 }
-@keyframes backwards-scroll{
-    0%  { transform: translate3d(0, -100%, 0); }
-    50% { transform: none; }
-    100%{ transform: translate3d(0, 100%, 0); }
+
+/*TARJETA EDUCACION*/
+
+.cards-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 40px;
 }
-@keyframes zoom-scroll{
-    0%  { filter: blur(5rem); transform: scale(0);   opacity: 0; visibility: hidden; }
-    50% { filter: blur(0);   transform: scale(1);   opacity: 1; visibility: visible; }
-    100%{ filter: blur(3rem); transform: scale(1.5); opacity: 0; visibility: hidden; }
+
+.education-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
+
+.education-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #791b1b, #e22b4340, #791b1b);
+}
+
+.education-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.card-header {
+    margin-bottom: 25px;
+}
+
+.institution-name {
+    color: #fff;
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.degree {
+    color: #180000;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.period {
+    color: #b8b8b8;
+    font-size: 1em;
+    font-style: italic;
+}
+
+.card-body {
+    margin: 25px 0;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    color: #e0e0e0;
+}
+
+.info-icon {
+    margin-right: 12px;
+    font-size: 1.2em;
+    min-width: 25px;
+}
+
+.info-content {
+    flex: 1;
+}
+
+.info-label {
+    color: #180000;
+    font-weight: 600;
+    font-size: 0.9em;
+    margin-bottom: 3px;
+}
+
+.info-text {
+    color: #fff;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+.contact-section {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.contact-title {
+    color: #180000;
+    font-size: 1.1em;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    background: rgba(78, 205, 196, 0.1);
+    border: 1px solid rgba(78, 205, 196, 0.3);
+    border-radius: 10px;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.contact-link:hover {
+    background: rgba(78, 205, 196, 0.2);
+    border-color: rgba(78, 205, 196, 0.5);
+    transform: translateX(5px);
+}
+
+.contact-link-icon {
+    font-size: 1.3em;
+    margin-right: 12px;
+    color: #180000;
+}
+
+.contact-link-text {
+    flex: 1;
+}
+
+.contact-link-label {
+    display: block;
+    font-size: 0.85em;
+    color: #b8b8b8;
+    margin-bottom: 2px;
+}
+
+.contact-link-value {
+    display: block;
+    font-size: 1em;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .cards-container {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .institution-name {
+        font-size: 1.5em;
+    }
+}
+
+/*TRAJETA cERTIFICACIONES*/
+

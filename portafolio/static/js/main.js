@@ -1,8 +1,3 @@
-/* =========================================
-Portafolio Nocturno – Tim Burton Style
-Autora: TuNombre
-   ========================================= */
-
 // ---------- AÑO DINÁMICO ----------
 document.getElementById('yearActual').textContent = new Date().getFullYear();
 
@@ -95,3 +90,4 @@ function validarFormulario(form){
 function removerEste(boton){
     boton.parentElement.remove();
 }
+

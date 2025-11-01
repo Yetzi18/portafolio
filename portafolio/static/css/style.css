@@ -440,3 +440,201 @@ main {
 
 /*TRAJETA cERTIFICACIONES*/
 
+.certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    padding: 20px 0;
+}
+
+.certificate-card {
+    position: relative;
+    height: 450px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certificate-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.certificate-card:hover .card-image img {
+    transform: scale(1.05);
+}
+
+.category-badge {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: #4caf50;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.75em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    z-index: 2;
+}
+
+.category-badge.deals {
+    background: #ff9800;
+}
+
+.category-badge.politics {
+    background: #f44336;
+}
+
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(26, 10, 46, 0.95) 0%, rgba(61, 15, 78, 0.95) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    padding: 30px;
+}
+
+.certificate-card:hover .card-overlay {
+    opacity: 1;
+}
+
+.overlay-content {
+    width: 100%;
+    color: white;
+    text-align: left;
+}
+
+.cert-title {
+    font-size: 1.8em;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.cert-divider {
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #4ecdc4, #45b7d1);
+    margin-bottom: 25px;
+}
+
+.cert-info {
+    margin-bottom: 25px;
+}
+
+.info-row {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 18px;
+}
+
+.info-icon {
+    font-size: 1.3em;
+    margin-right: 12px;
+    min-width: 30px;
+}
+
+.info-data {
+    flex: 1;
+}
+
+.info-label {
+    font-size: 0.8em;
+    color: #b8b8b8;
+    margin-bottom: 3px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.info-value {
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.verify-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: linear-gradient(135deg, #4ecdc4, #45b7d1);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(78, 205, 196, 0.3);
+}
+
+.verify-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(78, 205, 196, 0.4);
+    background: linear-gradient(135deg, #45b7d1, #4ecdc4);
+}
+
+@media (max-width: 1200px) {
+    .certificates-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+        margin-bottom: 40px;
+    }
+
+    .certificates-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .certificate-card {
+        height: 400px;
+    }
+
+    .cert-title {
+        font-size: 1.5em;
+    }
+
+    .overlay-content {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .certificate-card {
+        height: 350px;
+    }
+
+    .cert-title {
+        font-size: 1.3em;
+    }
+
+    .info-row {
+        margin-bottom: 15px;
+    }
+}

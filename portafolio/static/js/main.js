@@ -90,4 +90,27 @@ function validarFormulario(form){
 function removerEste(boton){
     boton.parentElement.remove();
 }
+// nuevo 
+function toggleCard(card) {
+            card.classList.toggle('flipped');
+        }
 
+function handleSubmit(event) {
+            event.preventDefault();
+            
+            const form = event.target;
+            const formData = new FormData(form);
+            
+            // Aquí puedes agregar tu lógica de envío de formulario
+            // Por ejemplo, usar EmailJS, Formspree, o tu propio backend
+            
+            // Simulación de envío
+            setTimeout(() => {
+                document.getElementById('successMessage').classList.add('show');
+                form.reset();
+                
+                setTimeout(() => {
+                    document.getElementById('successMessage').classList.remove('show');
+                }, 3000);
+            }, 500);
+        }

@@ -15,10 +15,7 @@
 <body data-bs-theme="dark">
     <!-- BARRA LATERAL IZQUIERDA -->
     <nav id="barraLateral" class="d-flex flex-column p-2">
-        <!-- <a class="logo mb-3" href="#inicio">
-        <img src="resource/img/flor.jpg" alt="Logo">
-        </a> -->
-
+        
         <a class="miniatura-nav" href="#inicio"
             style="background-image:url('resource/img/flor.jpg')"
             onclick="scrollASeccion(this)">
@@ -76,7 +73,6 @@
                 <div class="container text-center">
                     <img src="resource/img/flor.jpg" alt="Foto de perfil" class="img-fluid foto-perfil mb-4">
                     <h1 class="titulo display-1">Bienvenid@</h1>
-                    <!-- <p class="lead">Diseño y código con un toque de magia oscura.</p> -->
                     <a href="#sobreMi" class="btn btn-outline-light btn-lg btn-scroll">Descubre sobre mi</a>
                 </div>
             </section>
@@ -99,68 +95,77 @@
 
         <!-- SERVICIOS -->
         <section id="servicios" class="seccion fondo-animado py-5">
-                <h2 class="titulo text-center mb-4">Servicios</h2>
-                <div class="row g-4">
-                    <div class="col-md-4">
-                        <div class="card h-100 tarjeta-oscura">
-                            <div class="card-body">
-                                <h5 class="card-title">Diseño UI/UX</h5>
-                                <p class="card-text">Interfaces que cuentan historias.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card h-100 tarjeta-oscura">
-                            <div class="card-body">
-                                <h5 class="card-title">Front-End con Bootstrap</h5>
-                                <p class="card-text">Sitios responsivos y accesibles.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card h-100 tarjeta-oscura">
-                            <div class="card-body">
-                                <h5 class="card-title">Integración con GitHub Pages</h5>
-                                <p class="card-text">Despliegue rápido y gratuito.</p>
-                            </div>
-                        </div>
-                    </div>
+            <div class="container">
+                <h2 class="section-title">Servicios</h2>
+                
+                <div class="services-grid">
+                    <!-- Servicio 1 -->
+                    <article class="service-card" data-aos="fade-up">
+                        <div class="card-icon">🎨</div>
+                        <h3>Diseño UI/UX</h3>
+                        <p>Interfaces que cuentan historias y enamoran a tus usuarios.</p>
+                        <button class="cta-btn">Contrátame</button>
+                    </article>
+
+                    <!-- Servicio 2 -->
+                    <article class="service-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card-icon">💻</div>
+                        <h3>Front-End con Bootstrap</h3>
+                        <p>Sitios 100 % responsivos, accesibles y ultra-rápidos.</p>
+                        <button class="cta-btn">Contrátame</button>
+                    </article>
+
+                    <!-- Servicio 3 -->
+                    <article class="service-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="card-icon">⚡</div>
+                        <h3>Integración & GitHub Pages</h3>
+                        <p>Despliegue continuo y gratuito en segundos.</p>
+                        <button class="cta-btn">Contrátame</button>
+                    </article>
                 </div>
+            </div>
+                
         </section>
 
 
         <!-- HABILIDADES -->
         <section section id="habilidades" class="seccion fondo-animado py-5">
-            <!-- <img src="resource/img/flor.jpg" class="img-fondo" alt="Fondo"> -->
             <div class="container">
                 <h2 class="titulo text-center mb-4">Habilidades</h2>
-                <div class="row">
-                    <div class="col-md-6">
-                        <h5>Técnicas</h5>
-                        <ul class="lista-habilidades">
-                            <li onmouseover="resaltarHabilidad(this)" onmouseout="restaurarHabilidad(this)">HTML5</li>
-                            <li onmouseover="resaltarHabilidad(this)" onmouseout="restaurarHabilidad(this)">CSS3 / Flexbox</li>
-                            <li onmouseover="resaltarHabilidad(this)" onmouseout="restaurarHabilidad(this)">JavaScript ES6</li>
-                            <li onmouseover="resaltarHabilidad(this)" onmouseout="restaurarHabilidad(this)">Bootstrap 5</li>
-                            <li onmouseover="resaltarHabilidad(this)" onmouseout="restaurarHabilidad(this)">Git & GitHub</li>
+                
+                <div class="big-cards-wrapper">
+                    <!-- TARJETA TÉCNICAS -->
+                    <article class="big-card tech">
+                        <div class="card-header">
+                            <h3>Técnicas</h3>
+                        </div>
+                        <ul class="tag-list">
+                            <li>HTML5</li>
+                            <li>CSS3 / Flexbox</li>
+                            <li>JavaScript ES6</li>
+                            <li>Bootstrap 5</li>
+                            <li>Git & GitHub</li>
                         </ul>
-                    </div>
-                    <div class="col-md-6">
-                        <h5>Blandas</h5>
-                        <ul class="lista-habilidades">
-                            <li onmouseover="resaltarHabilidad(this)" onmouseout="restaurarHabilidad(this)">Creatividad</li>
-                            <li onmouseover="resaltarHabilidad(this)" onmouseout="restaurarHabilidad(this)">Trabajo en equipo</li>
-                            <li onmouseover="resaltarHabilidad(this)" onmouseout="restaurarHabilidad(this)">Comunicación</li>
-                            <li onmouseover="resaltarHabilidad(this)" onmouseout="restaurarHabilidad(this)">Pensamiento crítico</li>
+                    </article>
+
+                    <!-- TARJETA BLANDAS -->
+                    <article class="big-card soft">
+                        <div class="card-header">
+                            <h3>Blandas</h3>
+                        </div>
+                        <ul class="tag-list">
+                            <li>Creatividad</li>
+                            <li>Comunicación</li>
+                            <li>Pensamiento crítico</li>
+                            <li>Trabajo en equipo</li>
                         </ul>
-                    </div>
+                    </article>
                 </div>
             </div>
         </section>
 
         <!-- EDUCACIÓN -->
         <section id="educacion" class="seccion fondo-animado py-5">
-            <!-- <img src="resource/img/flor.jpg" class="img-fondo" alt="Fondo"> -->
             <div class="container">
                 <h1 class="titulo text-center mb-4">Educación</h1>
                 <div class="cards-container">
@@ -192,7 +197,6 @@
                             <h3 class="contact-title">Información de Contacto</h3>
                             <div class="contact-links">
                                 <a href="mailto:vatevicente@comeduc.cl" class="contact-link">
-                                    <!-- <span class="contact-link-icon">📧</span> -->
                                     <div class="contact-link-text">
                                         <span class="contact-link-label">Correo Electrónico</span>
                                         <span class="contact-link-value">vatevicente@comeduc.cl</span>
@@ -200,7 +204,6 @@
                                 </a>
                                 
                                 <a href="tel:+56212345678" class="contact-link">
-                                    <!-- <span class="contact-link-icon">📞</span> -->
                                     <div class="contact-link-text">
                                         <span class="contact-link-label">Teléfono</span>
                                         <span class="contact-link-value">(+56 9) 9824 4565 Central – (+56 9) 3456 6353 Inspectoría</span>
@@ -208,7 +211,6 @@
                                 </a>
                                 
                                 <a href="https://maps.app.goo.gl/9keYDvD8SjZM7A8fA" target="_blank" class="contact-link">
-                                    <!-- <span class="contact-link-icon">📍</span> -->
                                     <div class="contact-link-text">
                                         <span class="contact-link-label">Ver en Google Maps</span>
                                         <span class="contact-link-value">Dirección del Liceo</span>
@@ -216,7 +218,6 @@
                                 </a>
 
                                 <a href="http://www.liceovvh.cl/" target="_blank" class="contact-link">
-                                    <!-- <span class="contact-link-icon">🌐</span> -->
                                     <div class="contact-link-text">
                                         <span class="contact-link-label">Sitio Web</span>
                                         <span class="contact-link-value">https://liceovvh.cl/</span>
@@ -304,7 +305,6 @@
                     <div class="certificate-card">
                         <div class="card-image">
                             <img src="resource/img/flor.jpg" alt="Certificado 1">
-                            <div class="category-badge">TECNOLOGÍA</div>
                         </div>
 
                         <div class="card-overlay">
@@ -350,7 +350,6 @@
                     <div class="certificate-card">
                         <div class="card-image">
                             <img src="resource/img/flor.jpg" alt="Certificado 2">
-                            <div class="category-badge deals">NEGOCIOS</div>
                         </div>
                         <div class="card-overlay">
                             <div class="overlay-content">
@@ -395,7 +394,6 @@
                     <div class="certificate-card">
                         <div class="card-image">
                             <img src="ruta/certificado3.jpg" alt="Certificado 3">
-                            <div class="category-badge politics">DISEÑO</div>
                         </div>
                         <div class="card-overlay">
                             <div class="overlay-content">
@@ -440,7 +438,6 @@
                     <div class="certificate-card">
                         <div class="card-image">
                             <img src="ruta/certificado4.jpg" alt="Certificado 4">
-                            <div class="category-badge">PROGRAMACIÓN</div>
                         </div>
                         <div class="card-overlay">
                             <div class="overlay-content">
@@ -476,7 +473,92 @@
                                         </div>
                                     </div>
                                 </div>
-                                <a href="#" class="verify-btn">Ver Certificado</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Certificado 5 -->
+                    <div class="certificate-card">
+                        <div class="card-image">
+                            <img src="ruta/certificado4.jpg" alt="Certificado 4">
+                        </div>
+                        <div class="card-overlay">
+                            <div class="overlay-content">
+                                <h3 class="cert-title">Python para Data Science</h3>
+                                <div class="cert-divider"></div>
+                                <div class="cert-info">
+                                    <div class="info-row">
+                                        <span class="info-icon">🏛️</span>
+                                        <div class="info-data">
+                                            <p class="info-label">Institución</p>
+                                            <p class="info-value">IBM</p>
+                                        </div>
+                                    </div>
+                                    <div class="info-row">
+                                        <span class="info-icon">📅</span>
+                                        <div class="info-data">
+                                            <p class="info-label">Fecha de emisión</p>
+                                            <p class="info-value">Julio 2024</p>
+                                        </div>
+                                    </div>
+                                    <div class="info-row">
+                                        <span class="info-icon">⏱️</span>
+                                        <div class="info-data">
+                                            <p class="info-label">Duración</p>
+                                            <p class="info-value">60 horas</p>
+                                        </div>
+                                    </div>
+                                    <div class="info-row">
+                                        <span class="info-icon">🎯</span>
+                                        <div class="info-data">
+                                            <p class="info-label">Habilidades</p>
+                                            <p class="info-value">Python, Pandas, NumPy, Matplotlib</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Certificado 6 -->
+                    <div class="certificate-card">
+                        <div class="card-image">
+                            <img src="ruta/certificado4.jpg" alt="Certificado 4">
+                        </div>
+                        <div class="card-overlay">
+                            <div class="overlay-content">
+                                <h3 class="cert-title">Python para Data Science</h3>
+                                <div class="cert-divider"></div>
+                                <div class="cert-info">
+                                    <div class="info-row">
+                                        <span class="info-icon">🏛️</span>
+                                        <div class="info-data">
+                                            <p class="info-label">Institución</p>
+                                            <p class="info-value">IBM</p>
+                                        </div>
+                                    </div>
+                                    <div class="info-row">
+                                        <span class="info-icon">📅</span>
+                                        <div class="info-data">
+                                            <p class="info-label">Fecha de emisión</p>
+                                            <p class="info-value">Julio 2024</p>
+                                        </div>
+                                    </div>
+                                    <div class="info-row">
+                                        <span class="info-icon">⏱️</span>
+                                        <div class="info-data">
+                                            <p class="info-label">Duración</p>
+                                            <p class="info-value">60 horas</p>
+                                        </div>
+                                    </div>
+                                    <div class="info-row">
+                                        <span class="info-icon">🎯</span>
+                                        <div class="info-data">
+                                            <p class="info-label">Habilidades</p>
+                                            <p class="info-value">Python, Pandas, NumPy, Matplotlib</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -488,12 +570,114 @@
         <section id="experiencia" class="seccion fondo-animado py-5">
             <!-- <img src="resource/img/flor.jpg" class="img-fondo" alt="Fondo"> -->
             <div class="container">
-                <h2 class="titulo text-center mb-4">Experiencia</h2>
-                <div class="row">
-                    <div class="col-md-6">
-                        <h5>Práctica Profesional – MiniTienda Online</h5>
-                        <p>Desarrollo front-end con Bootstrap y JS. 2023</p>
+                <h1 class="main-title">
+                    <span class="title-word">E</span>
+                    <span class="title-word">X</span>
+                    <span class="title-word">P</span>
+                    <span class="title-word">E</span>
+                    <span class="title-word">R</span>
+                    <span class="title-word">I</span>
+                    <span class="title-word">E</span>
+                    <span class="title-word">N</span>
+                    <span class="title-word">C</span>
+                    <span class="title-word">I</span>
+                    <span class="title-word">A</span>
+                </h1>
+
+                <div class="timeline">
+                    <!-- Experiencia 1 -->
+                    <div class="timeline-item left">
+                        <div class="timeline-content">
+                            <div class="timeline-icon">
+                                <span>💼</span>
+                            </div>
+                            <div class="content-card">
+                                <div class="card-header">
+                                    <h2>Práctica Profesional</h2>
+                                    <span class="company">MiniTienda Online</span>
+                                </div>
+                                <div class="card-body">
+                                    <p class="role">Desarrollador Front-End</p>
+                                    <p class="period">
+                                        <span class="date-badge">2023</span>
+                                    </p>
+                                    <p class="description">
+                                        Desarrollo front-end con Bootstrap y JavaScript para crear una experiencia de compra en línea intuitiva y responsive.
+                                    </p>
+                                    <div class="skills-tags">
+                                        <span class="tag">HTML</span>
+                                        <span class="tag">CSS</span>
+                                        <span class="tag">Bootstrap</span>
+                                        <span class="tag">JavaScript</span>
+                                    </div>
+                                </div>
+                                <div class="card-glow"></div>
+                            </div>
+                        </div>
                     </div>
+
+                    <!-- Experiencia 2 -->
+                    <div class="timeline-item right">
+                        <div class="timeline-content">
+                            <div class="timeline-icon">
+                                <span>🚀</span>
+                            </div>
+                            <div class="content-card">
+                                <div class="card-header">
+                                    <h2>Proyecto Personal</h2>
+                                    <span class="company">Portafolio Web</span>
+                                </div>
+                                <div class="card-body">
+                                    <p class="role">Desarrollador Full Stack</p>
+                                    <p class="period">
+                                        <span class="date-badge">2024</span>
+                                    </p>
+                                    <p class="description">
+                                        Diseño y desarrollo de portafolio personal con animaciones avanzadas y diseño responsive para mostrar proyectos y habilidades.
+                                    </p>
+                                    <div class="skills-tags">
+                                        <span class="tag">React</span>
+                                        <span class="tag">Node.js</span>
+                                        <span class="tag">CSS3</span>
+                                        <span class="tag">Git</span>
+                                    </div>
+                                </div>
+                                <div class="card-glow"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Experiencia 3 -->
+                    <div class="timeline-item left">
+                        <div class="timeline-content">
+                            <div class="timeline-icon">
+                                <span>🎨</span>
+                            </div>
+                            <div class="content-card">
+                                <div class="card-header">
+                                    <h2>Freelance</h2>
+                                    <span class="company">Diseño Web</span>
+                                </div>
+                                <div class="card-body">
+                                    <p class="role">Diseñador UI/UX</p>
+                                    <p class="period">
+                                        <span class="date-badge">2024 - Presente</span>
+                                    </p>
+                                    <p class="description">
+                                        Creación de interfaces de usuario atractivas y funcionales para diversos clientes, enfocándome en la experiencia del usuario.
+                                    </p>
+                                    <div class="skills-tags">
+                                        <span class="tag">Figma</span>
+                                        <span class="tag">Adobe XD</span>
+                                        <span class="tag">Photoshop</span>
+                                        <span class="tag">UX Design</span>
+                                    </div>
+                                </div>
+                                <div class="card-glow"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-line"></div>
                 </div>
             </div>
         </section>
@@ -502,8 +686,123 @@
         <section id="referencias" class="seccion fondo-animado py-5">
             <!-- <img src="resource/img/flor.jpg" class="img-fondo" alt="Fondo"> -->
             <div class="container">
-                <h2 class="titulo text-center mb-4">Referencias</h2>
-                <p class="text-center">Disponibles bajo petición. Contacta conmigo.</p>
+                <h1 class="main-title">REFERENCIAS</h1>
+
+                <div class="references-grid">
+                    <!-- Referencia 1 -->
+                    <div class="reference-card" onclick="toggleCard(this)">
+                        <div class="card-front">
+                            <div class="profile-image">
+                                <img src="ruta/foto-persona1.jpg" alt="María González">
+                                <div class="image-overlay">
+                                </div>
+                            </div>
+                            <h3 class="reference-name">María González</h3>
+                            <p class="reference-role">Gerente de Proyectos</p>
+                        </div>
+
+                        <div class="card-back">
+                            <div class="back-header">
+                                <button class="close-btn" onclick="event.stopPropagation(); toggleCard(this.closest('.reference-card'))">✕</button>
+                                <h3>María González</h3>
+                                <p class="profession">Gerente de Proyectos - Tech Solutions SA</p>
+                            </div>
+
+                            <div class="back-content">
+                                <p class="intro">
+                                    "Trabajé directamente con [Tu Nombre] durante 2 años en proyectos de desarrollo web. Demostró excelentes habilidades técnicas y gran capacidad de trabajo en equipo."
+                                </p>
+
+                                <div class="contact-info">
+                                    <div class="contact-item">
+                                        <span class="contact-icon">📧</span>
+                                        <div class="contact-details">
+                                            <label>Correo Electrónico</label>
+                                            <a href="mailto:maria.gonzalez@techsolutions.com" onclick="event.stopPropagation()">
+                                                maria.gonzalez@techsolutions.com
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="contact-item">
+                                        <span class="contact-icon">📱</span>
+                                        <div class="contact-details">
+                                            <label>Teléfono</label>
+                                            <a href="tel:+56912345678" onclick="event.stopPropagation()">
+                                                +56 9 1234 5678
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="contact-item">
+                                        <span class="contact-icon">🏢</span>
+                                        <div class="contact-details">
+                                            <label>Empresa</label>
+                                            <span>Tech Solutions SA</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Referencia 2 -->
+                    <div class="reference-card" onclick="toggleCard(this)">
+                        <div class="card-front">
+                            <div class="profile-image">
+                                <img src="ruta/foto-persona2.jpg" alt="Carlos Ramírez">
+                                <div class="image-overlay">
+                                </div>
+                            </div>
+                            <h3 class="reference-name">Carlos Ramírez</h3>
+                            <p class="reference-role">Director de Tecnología</p>
+                        </div>
+
+                        <div class="card-back">
+                            <div class="back-header">
+                                <button class="close-btn" onclick="event.stopPropagation(); toggleCard(this.closest('.reference-card'))">✕</button>
+                                <h3>Carlos Ramírez</h3>
+                                <p class="profession">Director de Tecnología - Digital Innovation</p>
+                            </div>
+
+                            <div class="back-content">
+                                <p class="intro">
+                                    "Excelente profesional con gran capacidad de aprendizaje. Su dedicación y creatividad en la resolución de problemas lo hacen un activo valioso para cualquier equipo."
+                                </p>
+
+                                <div class="contact-info">
+                                    <div class="contact-item">
+                                        <span class="contact-icon">📧</span>
+                                        <div class="contact-details">
+                                            <label>Correo Electrónico</label>
+                                            <a href="mailto:carlos.ramirez@digitalinnovation.cl" onclick="event.stopPropagation()">
+                                                carlos.ramirez@digitalinnovation.cl
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="contact-item">
+                                        <span class="contact-icon">📱</span>
+                                        <div class="contact-details">
+                                            <label>Teléfono</label>
+                                            <a href="tel:+56987654321" onclick="event.stopPropagation()">
+                                                +56 9 8765 4321
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="contact-item">
+                                        <span class="contact-icon">🏢</span>
+                                        <div class="contact-details">
+                                            <label>Empresa</label>
+                                            <span>Digital Innovation</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -512,8 +811,71 @@
             <!-- <img src="resource/img/flor.jpg" class="img-fondo" alt="Fondo"> -->
             <div class="container">
                 <h2 class="titulo text-center mb-4">Portafolio</h2>
-                <div class="row g-4" id="grillaProyectos">
-                    <!-- JS insertará tarjetas -->
+
+                <div class="projects-grid">
+                    <!-- Proyecto 1 -->
+                    <div class="project-card">
+                        <div class="card-image">
+                            <img src="ruta/proyecto1.jpg" alt="Página de Recetas Macabras">
+                            <div class="project-overlay">
+                                <div class="project-tags">
+                                    <span class="tag">HTML</span>
+                                    <span class="tag">CSS</span>
+                                    <span class="tag">JavaScript</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="project-header">
+                                <h3 class="project-title">Página de Recetas Macabras</h3>
+                                <span class="project-icon">🍴</span>
+                            </div>
+                            <p class="project-description">HTML, CSS, JS vanilla. Diseño gótico.</p>
+                            <div class="card-footer">
+                                <a href="#" class="btn-repo">
+                                    <span class="btn-icon">📂</span>
+                                    Ver repo
+                                </a>
+                                <a href="#" class="btn-demo">
+                                    <span class="btn-icon">🚀</span>
+                                    Demo
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-glow"></div>
+                    </div>
+            
+                    <!-- Proyecto 2 -->
+                    <div class="project-card">
+                        <div class="card-image">
+                            <img src="ruta/proyecto3.jpg" alt="API del Clima Oscuro">
+                            <div class="project-overlay">
+                                <div class="project-tags">
+                                    <span class="tag">API</span>
+                                    <span class="tag">Bootstrap</span>
+                                    <span class="tag">Async/Await</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="project-header">
+                                <h3 class="project-title">API del Clima Oscuro</h3>
+                                <span class="project-icon">🌙</span>
+                            </div>
+                            <p class="project-description">Consume API externa. Bootstrap.</p>
+                            <div class="card-footer">
+                                <a href="#" class="btn-repo">
+                                    <span class="btn-icon">📂</span>
+                                    Ver repo
+                                </a>
+                                <a href="#" class="btn-demo">
+                                    <span class="btn-icon">🚀</span>
+                                    Demo
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-glow"></div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -524,34 +886,102 @@
             <!-- <img src="resource/img/flor.jpg" class="img-fondo" alt="Fondo"> -->
             <div class="container">
                 <h2 class="titulo text-center mb-4">Contacto</h2>
-                <div class="row justify-content-center">
-                    <div class="col-md-6">
-                        <form id="formularioContacto" onchange="validarFormulario(this)">
-                            <div class="mb-3">
-                                <label for="nombre" class="form-label">Nombre</label>
-                                <input type="text" class="form-control" id="nombre" required>
+
+                <div class="contact-wrapper">
+                    <!-- Sección Izquierda - Información -->
+                    <div class="info-section">
+                        <p class="subtitle">¿Tienes un proyecto en mente? ¡Hablemos!</p>
+                        
+                        <div class="contact-info">
+                            <div class="info-card">
+                                <div class="icon-circle">
+                                    <span>📧</span>
+                                </div>
+                                <div class="info-text">
+                                    <h3>Email</h3>
+                                    <a href="mailto:tu@email.com">tu@email.com</a>
+                                </div>
                             </div>
-                            <div class="mb-3">
-                                <label for="correo" class="form-label">Correo</label>
-                                <input type="email" class="form-control" id="correo" required>
+
+                            <div class="info-card">
+                                <div class="icon-circle">
+                                    <span>📱</span>
+                                </div>
+                                <div class="info-text">
+                                    <h3>Teléfono</h3>
+                                    <a href="tel:+56912345678">+56 9 1234 5678</a>
+                                </div>
                             </div>
-                            <div class="mb-3">
-                                <label for="mensaje" class="form-label">Mensaje</label>
-                                <textarea class="form-control" id="mensaje" rows="4" required></textarea>
+
+                            <div class="info-card">
+                                <div class="icon-circle">
+                                    <span>📍</span>
+                                </div>
+                                <div class="info-text">
+                                    <h3>Ubicación</h3>
+                                    <p>Santiago, Chile</p>
+                                </div>
                             </div>
-                            <button type="submit" class="btn btn-outline-light">Enviar</button>
+                        </div>
+
+                        <div class="social-links">
+                            <h3>Sígueme en:</h3>
+                            <div class="social-icons">
+                                <a href="#" class="social-icon" title="GitHub">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    </svg>
+                                </a>
+                                <a href="#" class="social-icon" title="LinkedIn">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                                    </svg>
+                                </a>
+                                <a href="#" class="social-icon" title="Twitter">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sección Derecha - Formulario -->
+                    <div class="form-section">
+                        <form class="contact-form" onsubmit="handleSubmit(event)">
+                            <div class="form-group">
+                                <label for="nombre">Nombre</label>
+                                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Correo</label>
+                                <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="asunto">Asunto</label>
+                                <input type="text" id="asunto" name="asunto" placeholder="¿En qué puedo ayudarte?" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="mensaje">Mensaje</label>
+                                <textarea id="mensaje" name="mensaje" rows="6" placeholder="Cuéntame sobre tu proyecto..." required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn-submit">
+                                <span class="btn-text">Enviar Mensaje</span>
+                                <span class="btn-icon">✉️</span>
+                            </button>
                         </form>
+
+                        <div class="success-message" id="successMessage">
+                            <span class="success-icon">✓</span>
+                            <p>¡Mensaje enviado con éxito!</p>
+                        </div>
                     </div>
                 </div>
-                <div class="text-center mt-4">
-                    <a href="https://github.com/TuUsuario" target="_blank" class="me-3">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="32" alt="GitHub">
-                    </a>
-                    <a href="mailto:tu@correo.com">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" width="32" alt="Mail">
-                    </a>
-                </div>
-            </div>
+            </div> 
         </section>
 
     </main>

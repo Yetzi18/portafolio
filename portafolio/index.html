@@ -15,58 +15,34 @@
 <body data-bs-theme="dark">
     <!-- BARRA LATERAL IZQUIERDA -->
     <nav id="barraLateral" class="d-flex flex-column p-2">
-        <!-- <a class="logo mb-3" href="#inicio">
-        <img src="resource/img/flor.jpg" alt="Logo">
-        </a> -->
-
-        <a class="miniatura-nav" href="#inicio"
-            style="background-image:url('resource/img/flor.jpg')"
-            onclick="scrollASeccion(this)">
+        <a id="nav-inicio" class="miniatura-nav" href="#inicio">
             <span>Inicio</span>
         </a>
-        <a class="miniatura-nav" href="#sobreMi"
-            style="background-image:url('img/nav/sobreMi.jpg')"
-            onclick="scrollASeccion(this)">
+        <a id="nav-sobreMi" class="miniatura-nav" href="#sobreMi">
             <span>Sobre mí</span>
         </a>
-        <a class="miniatura-nav" href="#servicios"
-            style="background-image:url('img/nav/servicios.jpg')"
-            onclick="scrollASeccion(this)">
+        <a id="nav-servicios" class="miniatura-nav" href="#servicios">
             <span>Servicios</span>
         </a>
-        <a class="miniatura-nav" href="#habilidades"
-            style="background-image:url('img/nav/habilidades.jpg')"
-            onclick="scrollASeccion(this)">
+        <a id="nav-habilidades" class="miniatura-nav" href="#habilidades">
             <span>Habilidades</span>
         </a>
-        <a class="miniatura-nav" href="#educacion"
-            style="background-image:url('img/nav/educacion.jpg')"
-            onclick="scrollASeccion(this)">
+        <a id="nav-educacion" class="miniatura-nav" href="#educacion">
             <span>Educación</span>
         </a>
-        <a class="miniatura-nav" href="#certificados"
-            style="background-image:url('img/nav/certificados.jpg')"
-            onclick="scrollASeccion(this)">
+        <a id="nav-certificados" class="miniatura-nav" href="#certificados">
             <span>Certificados</span>
         </a>
-        <a class="miniatura-nav" href="#experiencia"
-            style="background-image:url('img/nav/experiencia.jpg')"
-            onclick="scrollASeccion(this)">
+        <a id="nav-experiencia" class="miniatura-nav" href="#experiencia">
             <span>Experiencia</span>
         </a>
-        <a class="miniatura-nav" href="#referencias"
-            style="background-image:url('img/nav/referencias.jpg')"
-            onclick="scrollASeccion(this)">
+        <a id="nav-referencias" class="miniatura-nav" href="#referencias">
             <span>Referencias</span>
         </a>
-        <a class="miniatura-nav" href="#portafolio"
-            style="background-image:url('img/nav/portafolio.jpg')"
-            onclick="scrollASeccion(this)">
+        <a id="nav-portafolio" class="miniatura-nav" href="#portafolio">
             <span>Portafolio</span>
         </a>
-        <a class="miniatura-nav" href="#contacto"
-            style="background-image:url('img/nav/contacto.jpg')"
-            onclick="scrollASeccion(this)">
+        <a id="nav-contacto" class="miniatura-nav" href="#contacto">
             <span>Contacto</span>
         </a>
     </nav>
@@ -76,7 +52,6 @@
                 <div class="container text-center">
                     <img src="resource/img/flor.jpg" alt="Foto de perfil" class="img-fluid foto-perfil mb-4">
                     <h1 class="titulo display-1">Bienvenid@</h1>
-                    <!-- <p class="lead">Diseño y código con un toque de magia oscura.</p> -->
                     <a href="#sobreMi" class="btn btn-outline-light btn-lg btn-scroll">Descubre sobre mi</a>
                 </div>
             </section>
@@ -131,27 +106,26 @@
 
         <!-- HABILIDADES -->
         <section section id="habilidades" class="seccion fondo-animado py-5">
-            <!-- <img src="resource/img/flor.jpg" class="img-fondo" alt="Fondo"> -->
             <div class="container">
                 <h2 class="titulo text-center mb-4">Habilidades</h2>
                 <div class="row">
                     <div class="col-md-6">
                         <h5>Técnicas</h5>
                         <ul class="lista-habilidades">
-                            <li onmouseover="resaltarHabilidad(this)" onmouseout="restaurarHabilidad(this)">HTML5</li>
-                            <li onmouseover="resaltarHabilidad(this)" onmouseout="restaurarHabilidad(this)">CSS3 / Flexbox</li>
-                            <li onmouseover="resaltarHabilidad(this)" onmouseout="restaurarHabilidad(this)">JavaScript ES6</li>
-                            <li onmouseover="resaltarHabilidad(this)" onmouseout="restaurarHabilidad(this)">Bootstrap 5</li>
-                            <li onmouseover="resaltarHabilidad(this)" onmouseout="restaurarHabilidad(this)">Git & GitHub</li>
+                            <li>HTML5</li>
+                            <li>CSS3 / Flexbox</li>
+                            <li>JavaScript ES6</li>
+                            <li>Bootstrap 5</li>
+                            <li>Git & GitHub</li>
                         </ul>
                     </div>
                     <div class="col-md-6">
                         <h5>Blandas</h5>
                         <ul class="lista-habilidades">
-                            <li onmouseover="resaltarHabilidad(this)" onmouseout="restaurarHabilidad(this)">Creatividad</li>
-                            <li onmouseover="resaltarHabilidad(this)" onmouseout="restaurarHabilidad(this)">Trabajo en equipo</li>
-                            <li onmouseover="resaltarHabilidad(this)" onmouseout="restaurarHabilidad(this)">Comunicación</li>
-                            <li onmouseover="resaltarHabilidad(this)" onmouseout="restaurarHabilidad(this)">Pensamiento crítico</li>
+                            <li>Creatividad</li>
+                            <li>Trabajo en equipo</li>
+                            <li>Comunicación</li>
+                            <li>Pensamiento crítico</li>
                         </ul>
                     </div>
                 </div>
@@ -160,7 +134,6 @@
 
         <!-- EDUCACIÓN -->
         <section id="educacion" class="seccion fondo-animado py-5">
-            <!-- <img src="resource/img/flor.jpg" class="img-fondo" alt="Fondo"> -->
             <div class="container">
                 <h1 class="titulo text-center mb-4">Educación</h1>
                 <div class="cards-container">
@@ -177,7 +150,7 @@
                                 <div class="info-content">
                                     <div class="info-label">Tipo de Educación</div>
                                     <div class="info-text">Educación Media Técnico-Profesional Comercial</div>
-                                </div>
+                                 </div>
                             </div>
 
                             <div class="info-item">
@@ -192,7 +165,6 @@
                             <h3 class="contact-title">Información de Contacto</h3>
                             <div class="contact-links">
                                 <a href="mailto:vatevicente@comeduc.cl" class="contact-link">
-                                    <!-- <span class="contact-link-icon">📧</span> -->
                                     <div class="contact-link-text">
                                         <span class="contact-link-label">Correo Electrónico</span>
                                         <span class="contact-link-value">vatevicente@comeduc.cl</span>
@@ -200,7 +172,6 @@
                                 </a>
                                 
                                 <a href="tel:+56212345678" class="contact-link">
-                                    <!-- <span class="contact-link-icon">📞</span> -->
                                     <div class="contact-link-text">
                                         <span class="contact-link-label">Teléfono</span>
                                         <span class="contact-link-value">(+56 9) 9824 4565 Central – (+56 9) 3456 6353 Inspectoría</span>
@@ -208,7 +179,6 @@
                                 </a>
                                 
                                 <a href="https://maps.app.goo.gl/9keYDvD8SjZM7A8fA" target="_blank" class="contact-link">
-                                    <!-- <span class="contact-link-icon">📍</span> -->
                                     <div class="contact-link-text">
                                         <span class="contact-link-label">Ver en Google Maps</span>
                                         <span class="contact-link-value">Dirección del Liceo</span>
@@ -216,7 +186,6 @@
                                 </a>
 
                                 <a href="http://www.liceovvh.cl/" target="_blank" class="contact-link">
-                                    <!-- <span class="contact-link-icon">🌐</span> -->
                                     <div class="contact-link-text">
                                         <span class="contact-link-label">Sitio Web</span>
                                         <span class="contact-link-value">https://liceovvh.cl/</span>
@@ -236,7 +205,6 @@
 
                         <div class="card-body">
                             <div class="info-item">
-                                <!-- <span class="info-icon">💼</span> -->
                                 <div class="info-content">
                                     <div class="info-label">Tipo de Programa</div>
                                     <div class="info-text">Programa de formación dual combinando educación académica y experiencia práctica</div>
@@ -244,7 +212,6 @@
                             </div>
 
                             <div class="info-item">
-                                <!-- <span class="info-icon">📍</span> -->
                                 <div class="info-content">
                                     <div class="info-label">Ubicación</div>
                                     <div class="info-text">La Granja, Región Metropolitana</div>
@@ -256,7 +223,6 @@
                             <h3 class="contact-title">Información de Contacto</h3>
                             <div class="contact-links">
                                 <a href="mailto:informaciones@inacap.cl" class="contact-link">
-                                    <!-- <span class="contact-link-icon">📧</span> -->
                                     <div class="contact-link-text">
                                         <span class="contact-link-label">Correo Electrónico</span>
                                         <span class="contact-link-value">informaciones@inacap.cl</span>
@@ -264,7 +230,6 @@
                                 </a>
                                 
                                 <a href="tel:800 20 25 20" class="contact-link">
-                                    <!-- <span class="contact-link-icon">📞</span> -->
                                     <div class="contact-link-text">
                                         <span class="contact-link-label">Teléfono</span>
                                         <span class="contact-link-value">800 20 25 20</span>
@@ -272,7 +237,6 @@
                                 </a>
                                 
                                 <a href="https://maps.app.goo.gl/4bF84QJZX91fVjdA6" target="_blank" class="contact-link">
-                                    <!-- <span class="contact-link-icon">📍</span> -->
                                     <div class="contact-link-text">
                                         <span class="contact-link-label">Ver en Google Maps</span>
                                         <span class="contact-link-value">Sedes La Granja Inacap</span>
@@ -280,7 +244,6 @@
                                 </a>
                                 
                                 <a href="https://www.inacap.cl/" target="_blank" class="contact-link">
-                                    <!-- <span class="contact-link-icon">🌐</span> -->
                                     <div class="contact-link-text">
                                         <span class="contact-link-label">Sitio Web</span>
                                         <span class="contact-link-value">https://portal.inacap.cl/</span>
@@ -295,10 +258,8 @@
 
         <!-- CERTIFICADOS -->
         <section id="certificados" class="seccion fondo-animado py-5">
-            <!-- <img src="resource/img/flor.jpg" class="img-fondo" alt="Fondo"> -->
             <div class="container">
                 <h1>Certificaciones</h1>
-
                 <div class="certificates-grid">
                     <!-- Certificado 1 -->
                     <div class="certificate-card">
@@ -306,7 +267,6 @@
                             <img src="resource/img/flor.jpg" alt="Certificado 1">
                             <div class="category-badge">TECNOLOGÍA</div>
                         </div>
-
                         <div class="card-overlay">
                             <div class="overlay-content">
                                 <h3 class="cert-title">Desarrollo Web Full Stack</h3>
@@ -486,7 +446,6 @@
 
         <!-- EXPERIENCIA -->
         <section id="experiencia" class="seccion fondo-animado py-5">
-            <!-- <img src="resource/img/flor.jpg" class="img-fondo" alt="Fondo"> -->
             <div class="container">
                 <h2 class="titulo text-center mb-4">Experiencia</h2>
                 <div class="row">
@@ -500,7 +459,6 @@
 
         <!-- REFERENCIAS -->
         <section id="referencias" class="seccion fondo-animado py-5">
-            <!-- <img src="resource/img/flor.jpg" class="img-fondo" alt="Fondo"> -->
             <div class="container">
                 <h2 class="titulo text-center mb-4">Referencias</h2>
                 <p class="text-center">Disponibles bajo petición. Contacta conmigo.</p>
@@ -509,7 +467,6 @@
 
         <!-- PORTAFOLIO -->
         <section id="portafolio" class="seccion fondo-animado py-5">
-            <!-- <img src="resource/img/flor.jpg" class="img-fondo" alt="Fondo"> -->
             <div class="container">
                 <h2 class="titulo text-center mb-4">Portafolio</h2>
                 <div class="row g-4" id="grillaProyectos">
@@ -521,12 +478,11 @@
 
         <!-- CONTACTO -->
         <section id="contacto" class="seccion fondo-animado py-5">
-            <!-- <img src="resource/img/flor.jpg" class="img-fondo" alt="Fondo"> -->
             <div class="container">
                 <h2 class="titulo text-center mb-4">Contacto</h2>
                 <div class="row justify-content-center">
                     <div class="col-md-6">
-                        <form id="formularioContacto" onchange="validarFormulario(this)">
+                        <form id="formularioContacto">
                             <div class="mb-3">
                                 <label for="nombre" class="form-label">Nombre</label>
                                 <input type="text" class="form-control" id="nombre" required>
@@ -563,6 +519,7 @@
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="static/js/proyectos.js"></script>
     <script src="static/js/main.js"></script>
 </body>
 </html>

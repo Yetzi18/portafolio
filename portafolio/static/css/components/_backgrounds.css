@@ -1,0 +1,58 @@
+.fondo-animado {
+    background: linear-gradient(-45deg, #000000, #2c0101, #3f0f0f, #ffffff);
+    background-size: 400% 400%;
+    animation: portafolioRespira 12s ease infinite;
+    position: relative;
+    overflow: hidden;
+}
+
+.fondo-animado::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 60%);
+    animation: ondaBlanca 8s linear infinite;
+    z-index: 0;
+}
+
+.fondo-animado .container {
+    position: relative;
+    z-index: 1;
+}
+
+.contenido-superior {
+    position: relative;
+    z-index: 1;
+}
+
+.fondo-tinta {
+    background: #0a0a0a;
+    position: relative;
+    overflow: hidden;
+}
+
+.fondo-tinta::before,
+.fondo-tinta::after {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    background: radial-gradient(
+        ellipse at center,
+        rgba(138, 43, 226, 0.08) 0%,
+        transparent 50%
+    );
+    animation: tintaGotea 10s ease-in-out infinite;
+    transform-origin: center;
+    z-index: 0;
+}
+
+.fondo-tinta::after {
+    animation-delay: 5s;
+    transform: rotate(45deg);
+}

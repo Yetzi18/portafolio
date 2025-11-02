@@ -1,0 +1,57 @@
+@media (max-width: 768px){
+    #barraLateral{
+        transform: translateX(-100%);
+        transition: transform .3s;
+    }
+    #barraLateral.activa{
+        transform: translateX(0);
+    }
+    #contenidoPrincipal{
+        margin-left: 0;
+        width: 100%;
+    }
+    .mi-footer {
+        width: 100vw;
+        margin-left: 0;
+    }
+    .cards-container {
+        grid-template-columns: 1fr;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    .institution-name {
+        font-size: 1.5em;
+    }
+    .certificates-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    .certificate-card {
+        height: 400px;
+    }
+    .cert-title {
+        font-size: 1.5em;
+    }
+    .overlay-content {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .certificates-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .certificate-card {
+        height: 350px;
+    }
+    .cert-title {
+        font-size: 1.3em;
+    }
+    .info-row {
+        margin-bottom: 15px;
+    }
+}

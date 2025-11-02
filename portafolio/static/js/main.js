@@ -1,93 +1,72 @@
 // ---------- AÑO DINÁMICO ----------
 document.getElementById('yearActual').textContent = new Date().getFullYear();
 
-// ---------- NAVEGACIÓN ACTIVA ----------
-// window.addEventListener('scroll', () => {
-//     let secciones = document.querySelectorAll('section');
-//     let enlaces = document.querySelectorAll('.navbar-nav .nav-link');
-//     let scrollActual = window.pageYOffset + 100;
-
-//     secciones.forEach((sec, idx) => {
-//         if(scrollActual >= sec.offsetTop && scrollActual < sec.offsetTop + sec.offsetHeight){
-//         enlaces.forEach(link => link.classList.remove('active'));
-//         if(enlaces[idx]) enlaces[idx].classList.add('active');
-//         }
-//     });
-// });
-
 // ---------- SCROLL SUAVE + COMPENSAR BARRA LATERAL ----------
-function scrollASeccion(enlace) {
-    enlace.addEventListener('click', e => e.preventDefault());
-    const objetivo = document.querySelector(enlace.getAttribute('href'));
-    if (objetivo) {
-        const alturaBarra = 200; // mismo ancho que la barra lateral
-        const posicion = objetivo.offsetTop - 20; // pequeño margen superior
-        window.scrollTo({ top: posicion, behavior: 'smooth' });
-    }
-    // Cerrar barra en móvil
-    if (window.innerWidth <= 768) {
-        document.getElementById('barraLateral').classList.remove('activa');
-    }
-}
+document.querySelectorAll('.miniatura-nav').forEach(enlace => {
+    enlace.addEventListener('click', function(e) {
+        e.preventDefault();
+        const objetivo = document.querySelector(this.getAttribute('href'));
+        if (objetivo) {
+            const posicion = objetivo.offsetTop - 20;
+            window.scrollTo({ top: posicion, behavior: 'smooth' });
+        }
+        if (window.innerWidth <= 768) {
+            document.getElementById('barraLateral').classList.remove('activa');
+        }
+    });
+});
 
 // ---------- HABILIDADES HOVER ----------
-function resaltarHabilidad(elemento){
-    elemento.style.color = 'var(--color-secundario)';
-    elemento.style.borderLeftColor = 'var(--color-primario)';
-}
-function restaurarHabilidad(elemento){
-    elemento.style.color = '';
-    elemento.style.borderLeftColor = '';
-}
+document.querySelectorAll('.lista-habilidades li').forEach(habilidad => {
+    habilidad.addEventListener('mouseover', function() {
+        this.style.color = 'var(--color-secundario)';
+        this.style.borderLeftColor = 'var(--color-primario)';
+    });
+    habilidad.addEventListener('mouseout', function() {
+        this.style.color = '';
+        this.style.borderLeftColor = '';
+    });
+});
 
 // ---------- PROYECTOS DINÁMICOS ----------
-const proyectos = [
-    {
-        titulo: 'Página de Recetas Macabras',
-        desc: 'HTML, CSS, JS vanilla. Diseño gótico.',
-        repo: 'https://github.com/TuUsuario/recetas-macabras'
-    },
-    {
-        titulo: 'App de Tareas Espectrales',
-        desc: 'CRUD con LocalStorage.',
-        repo: 'https://github.com/TuUsuario/tareas-espectrales'
-    },
-    {
-        titulo: 'API del Clima Oscuro',
-        desc: 'Consume API externa. Bootstrap.',
-        repo: 'https://github.com/TuUsuario/clima-oscuro'
-    }
-];
-
 const grilla = document.getElementById('grillaProyectos');
 proyectos.forEach(p => {
-    grilla.innerHTML += `
-        <div class="col-md-4">
-        <div class="card tarjeta-oscura h-100">
-            <div class="card-body d-flex flex-column">
-            <h5 class="card-title">${p.titulo}</h5>
-            <p class="card-text">${p.desc}</p>
-            <a href="${p.repo}" target="_blank" class="btn btn-sm btn-outline-light mt-auto">Ver repo</a>
-            </div>
-        </div>
-        </div>`;
+    const col = document.createElement('div');
+    col.className = 'col-md-4';
+
+    const card = document.createElement('div');
+    card.className = 'card tarjeta-oscura h-100';
+
+    const cardBody = document.createElement('div');
+    cardBody.className = 'card-body d-flex flex-column';
+
+    const cardTitle = document.createElement('h5');
+    cardTitle.className = 'card-title';
+    cardTitle.textContent = p.titulo;
+
+    const cardText = document.createElement('p');
+    cardText.className = 'card-text';
+    cardText.textContent = p.desc;
+
+    const repoLink = document.createElement('a');
+    repoLink.href = p.repo;
+    repoLink.target = '_blank';
+    repoLink.className = 'btn btn-sm btn-outline-light mt-auto';
+    repoLink.textContent = 'Ver repo';
+
+    cardBody.appendChild(cardTitle);
+    cardBody.appendChild(cardText);
+    cardBody.appendChild(repoLink);
+    card.appendChild(cardBody);
+    col.appendChild(card);
+    grilla.appendChild(col);
 });
 
 // ---------- FORMULARIO ----------
-function validarFormulario(form){
-  // Ejemplo simple: cambiar borde si está vacío
-    const inputs = form.querySelectorAll('input,textarea');
-    inputs.forEach(inp => {
-        inp.addEventListener('input', () => {
-        inp.classList.toggle('is-invalid', !inp.value);
-        inp.classList.toggle('is-valid', !!inp.value);
-        });
-    });
-}
-
-// ---------- REMOVER ELEMENTO DEMO ----------
-/* Puedes añadir un botón con onclick="removerEste(this)" */
-function removerEste(boton){
-    boton.parentElement.remove();
-}
-
+const formulario = document.getElementById('formularioContacto');
+formulario.addEventListener('input', function(e) {
+    if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') {
+        e.target.classList.toggle('is-invalid', !e.target.value);
+        e.target.classList.toggle('is-valid', !!e.target.value);
+    }
+});

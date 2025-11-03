@@ -4,90 +4,46 @@
     <meta charset="utf-8">
     <title>Portafolio | Yetzibel Gonzalez</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
-    <!-- CSS propio -->
     <link rel="stylesheet" href="static/css/style.css">
 </head>
 
 <body data-bs-theme="dark">
-    <!-- BARRA LATERAL IZQUIERDA -->
+    <!-- BARRA LATERAL -->
     <nav id="barraLateral" class="d-flex flex-column p-2">
-        
-        <a class="miniatura-nav" href="#inicio"
-            style="background-image:url('resource/img/flor.jpg')"
-            onclick="scrollASeccion(this)">
-            <span>Inicio</span>
-        </a>
-        <a class="miniatura-nav" href="#sobreMi"
-            style="background-image:url('img/nav/sobreMi.jpg')"
-            onclick="scrollASeccion(this)">
-            <span>Sobre mí</span>
-        </a>
-        <a class="miniatura-nav" href="#servicios"
-            style="background-image:url('img/nav/servicios.jpg')"
-            onclick="scrollASeccion(this)">
-            <span>Servicios</span>
-        </a>
-        <a class="miniatura-nav" href="#habilidades"
-            style="background-image:url('img/nav/habilidades.jpg')"
-            onclick="scrollASeccion(this)">
-            <span>Habilidades</span>
-        </a>
-        <a class="miniatura-nav" href="#educacion"
-            style="background-image:url('img/nav/educacion.jpg')"
-            onclick="scrollASeccion(this)">
-            <span>Educación</span>
-        </a>
-        <a class="miniatura-nav" href="#certificados"
-            style="background-image:url('img/nav/certificados.jpg')"
-            onclick="scrollASeccion(this)">
-            <span>Certificados</span>
-        </a>
-        <a class="miniatura-nav" href="#experiencia"
-            style="background-image:url('img/nav/experiencia.jpg')"
-            onclick="scrollASeccion(this)">
-            <span>Experiencia</span>
-        </a>
-        <a class="miniatura-nav" href="#referencias"
-            style="background-image:url('img/nav/referencias.jpg')"
-            onclick="scrollASeccion(this)">
-            <span>Referencias</span>
-        </a>
-        <a class="miniatura-nav" href="#portafolio"
-            style="background-image:url('img/nav/portafolio.jpg')"
-            onclick="scrollASeccion(this)">
-            <span>Portafolio</span>
-        </a>
-        <a class="miniatura-nav" href="#contacto"
-            style="background-image:url('img/nav/contacto.jpg')"
-            onclick="scrollASeccion(this)">
-            <span>Contacto</span>
-        </a>
+        <a class="miniatura-nav" href="#inicio" style="background-image:url('resource/img/flor.jpg')" onclick="scrollASeccion(this)"><span>Inicio</span></a>
+        <a class="miniatura-nav" href="#sobreMi" style="background-image:url('img/nav/sobreMi.jpg')" onclick="scrollASeccion(this)"><span>Sobre mí</span></a>
+        <a class="miniatura-nav" href="#servicios" style="background-image:url('img/nav/servicios.jpg')" onclick="scrollASeccion(this)"><span>Servicios</span></a>
+        <a class="miniatura-nav" href="#habilidades" style="background-image:url('img/nav/habilidades.jpg')" onclick="scrollASeccion(this)"><span>Habilidades</span></a>
+        <a class="miniatura-nav" href="#educacion" style="background-image:url('img/nav/educacion.jpg')" onclick="scrollASeccion(this)"><span>Educación</span></a>
+        <a class="miniatura-nav" href="#certificados" style="background-image:url('img/nav/certificados.jpg')" onclick="scrollASeccion(this)"><span>Certificados</span></a>
+        <a class="miniatura-nav" href="#experiencia" style="background-image:url('img/nav/experiencia.jpg')" onclick="scrollASeccion(this)"><span>Experiencia</span></a>
+        <a class="miniatura-nav" href="#referencias" style="background-image:url('img/nav/referencias.jpg')" onclick="scrollASeccion(this)"><span>Referencias</span></a>
+        <a class="miniatura-nav" href="#portafolio" style="background-image:url('img/nav/portafolio.jpg')" onclick="scrollASeccion(this)"><span>Portafolio</span></a>
+        <a class="miniatura-nav" href="#contacto" style="background-image:url('img/nav/contacto.jpg')" onclick="scrollASeccion(this)"><span>Contacto</span></a>
     </nav>
-    <main id="contenidoPrincipal">
-        <div class="contenido-superior">
-            <section id="inicio" class="fondo-tinta d-flex align-items-center min-vh-100">
-                <div class="container text-center">
-                    <img src="resource/img/flor.jpg" alt="Foto de perfil" class="img-fluid foto-perfil mb-4">
-                    <h1 class="titulo display-1">Bienvenid@</h1>
-                    <a href="#sobreMi" class="btn btn-outline-light btn-lg btn-scroll">Descubre sobre mi</a>
-                </div>
-            </section>
-        </div>
 
-        <!-- ABOUT -->
+    <main id="contenidoPrincipal">
+        <!-- INICIO -->
+        <section id="inicio" class="fondo-tinta seccion">
+            <div class="container text-center">
+                <img src="resource/img/flor.jpg" alt="Foto de perfil" class="img-fluid foto-perfil mb-4">
+                <h1 class="titulo display-1">Bienvenid@</h1>
+                <a href="#sobreMi" class="btn btn-outline-light btn-lg">Descubre sobre mi</a>
+            </div>
+        </section>
+
+        <!-- SOBRE MI -->
         <section id="sobreMi" class="seccion fondo-animado py-5">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-md-6">
-                        <img src="resource/img/flor.jpg" alt="Foto sobre mi" class="img-fluid rounded-circle borde-inquietante">
+                        <img src="resource/img/flor.jpg" alt="Foto sobre mi" class="img-fluid rounded-circle">
                     </div>
                     <div class="card_sobremi col-md-6">
                         <h2 class="titulo">Sobre mí</h2>
-                        <p>Soy una apasionada del desarrollo web con alma de cuento. Me encanta crear experiencias inmersivas que combinen estética y funcionalidad. Mi pasa tiempo es el crochet y ver películas o series.</p>
+                        <p>Soy una apasionada del desarrollo web con alma de cuento. Me encanta crear experiencias inmersivas que combinen estética y funcionalidad. Mi pasatiempo es el crochet y ver películas o series.</p>
                     </div>
                 </div>
             </div>
@@ -100,105 +56,74 @@
                     <h1 class="titulo">SERVICIOS</h1>
                     <p class="subtitle">Soluciones creativas y profesionales para tu proyecto</p>
                 </div>
-
                 <div class="services-grid">
-                    <!-- Servicio 1 -->
                     <div class="service-card">
                         <div class="card-header">
-                            <div class="icon-wrapper">
-                                <span class="service-icon">💻</span>
-                            </div>
+                            <div class="icon-wrapper"><span class="service-icon">💻</span></div>
                             <div class="card-number">01</div>
                         </div>
                         <div class="card-body">
                             <h3 class="service-title">Diseño UI/UX</h3>
-                            <p class="service-description">
-                                Interfaces intuitivas y atractivas centradas en la experiencia del usuario. Wireframes, prototipos y diseños pixel-perfect.
-                            </p>
+                            <p class="service-description">Interfaces intuitivas y atractivas centradas en la experiencia del usuario. Wireframes, prototipos y diseños pixel-perfect.</p>
                             <ul class="service-features">
                                 <li>✓ Diseño responsive</li>
                                 <li>✓ Prototipado interactivo</li>
                                 <li>✓ User research</li>
                             </ul>
                         </div>
-                        <div class="card-footer">
-                            <button class="btn-service">Solicitar</button>
-                        </div>
+                        <div class="card-footer"><button class="btn-service">Solicitar</button></div>
                         <div class="card-glow"></div>
                     </div>
-
-                    <!-- Servicio 2 -->
                     <div class="service-card">
                         <div class="card-header">
-                            <div class="icon-wrapper">
-                                <span class="service-icon">🚀</span>
-                            </div>
+                            <div class="icon-wrapper"><span class="service-icon">🚀</span></div>
                             <div class="card-number">02</div>
                         </div>
                         <div class="card-body">
                             <h3 class="service-title">Front-End con Bootstrap</h3>
-                            <p class="service-description">
-                                Sitios modernos y responsivos utilizando las mejores prácticas de desarrollo con Bootstrap y tecnologías actuales.
-                            </p>
+                            <p class="service-description">Sitios modernos y responsivos utilizando las mejores prácticas de desarrollo con Bootstrap y tecnologías actuales.</p>
                             <ul class="service-features">
                                 <li>✓ HTML5, CSS3, JavaScript</li>
                                 <li>✓ Bootstrap 5</li>
                                 <li>✓ Optimización SEO</li>
                             </ul>
                         </div>
-                        <div class="card-footer">
-                            <button class="btn-service">Solicitar</button>
-                        </div>
+                        <div class="card-footer"><button class="btn-service">Solicitar</button></div>
                         <div class="card-glow"></div>
                     </div>
-
-                    <!-- Servicio 3 -->
                     <div class="service-card">
                         <div class="card-header">
-                            <div class="icon-wrapper">
-                                <span class="service-icon">🔗</span>
-                            </div>
+                            <div class="icon-wrapper"><span class="service-icon">🔗</span></div>
                             <div class="card-number">03</div>
                         </div>
                         <div class="card-body">
                             <h3 class="service-title">Integración con GitHub Pages</h3>
-                            <p class="service-description">
-                                Despliegue y hosting gratuito de tu sitio web con GitHub Pages. Control de versiones y actualizaciones simples.
-                            </p>
+                            <p class="service-description">Despliegue y hosting gratuito de tu sitio web con GitHub Pages. Control de versiones y actualizaciones simples.</p>
                             <ul class="service-features">
                                 <li>✓ Deployment automático</li>
                                 <li>✓ Dominio personalizado</li>
                                 <li>✓ SSL incluido</li>
                             </ul>
                         </div>
-                        <div class="card-footer">
-                            <button class="btn-service">Solicitar</button>
-                        </div>
+                        <div class="card-footer"><button class="btn-service">Solicitar</button></div>
                         <div class="card-glow"></div>
                     </div>
                 </div>
-
                 <div class="cta-section">
                     <h2>¿Tienes un proyecto en mente?</h2>
                     <p>Hablemos y hagamos realidad tu idea</p>
                     <a href="#contacto" class="btn-cta">Contáctame</a>
                 </div>
             </div>
-                
         </section>
 
-
         <!-- HABILIDADES -->
-        <section section id="habilidades" class="seccion fondo-animado py-5">
+        <section id="habilidades" class="seccion fondo-animado py-5">
             <div class="container">
                 <h2 class="titulo text-center mb-4">Habilidades</h2>
-                
                 <div class="big-cards-wrapper">
-                    <!-- TARJETA TÉCNICAS -->
-                    <article class="big-card tech">
-                        <div class="card-header">
-                            <h3>Técnicas</h3>
-                        </div>
+                    <article class="big-card">
+                        <div class="card-header"><h3>Técnicas</h3></div>
                         <ul class="tag-list">
                             <li>HTML5</li>
                             <li>CSS3 / Flexbox</li>
@@ -207,12 +132,8 @@
                             <li>Git & GitHub</li>
                         </ul>
                     </article>
-
-                    <!-- TARJETA BLANDAS -->
-                    <article class="big-card soft">
-                        <div class="card-header">
-                            <h3>Blandas</h3>
-                        </div>
+                    <article class="big-card">
+                        <div class="card-header"><h3>Blandas</h3></div>
                         <ul class="tag-list">
                             <li>Creatividad</li>
                             <li>Comunicación</li>
@@ -229,14 +150,12 @@
             <div class="container">
                 <h1 class="titulo text-center mb-4">Educación</h1>
                 <div class="cards-container">
-                    <!-- Tarjeta Liceo -->
                     <div class="education-card">
                         <div class="card-header">
                             <h2 class="institution-name">Liceo Comercial Vate Vicente Huidobro</h2>
                             <p class="degree">Enseñanza Media</p>
                             <p class="period">2024 - 2025</p>
                         </div>
-
                         <div class="card-body">
                             <div class="info-item">
                                 <div class="info-content">
@@ -244,7 +163,6 @@
                                     <div class="info-text">Educación Media Técnico-Profesional Comercial</div>
                                 </div>
                             </div>
-
                             <div class="info-item">
                                 <div class="info-content">
                                     <div class="info-label">Ubicación</div>
@@ -252,7 +170,6 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="contact-section">
                             <h3 class="contact-title">Información de Contacto</h3>
                             <div class="contact-links">
@@ -262,21 +179,18 @@
                                         <span class="contact-link-value">vatevicente@comeduc.cl</span>
                                     </div>
                                 </a>
-                                
-                                <a href="tel:+56212345678" class="contact-link">
+                                <a href="tel:+56998244565" class="contact-link">
                                     <div class="contact-link-text">
                                         <span class="contact-link-label">Teléfono</span>
-                                        <span class="contact-link-value">(+56 9) 9824 4565 Central – (+56 9) 3456 6353 Inspectoría</span>
+                                        <span class="contact-link-value">(+56 9) 9824 4565 Central</span>
                                     </div>
                                 </a>
-                                
                                 <a href="https://maps.app.goo.gl/9keYDvD8SjZM7A8fA" target="_blank" class="contact-link">
                                     <div class="contact-link-text">
                                         <span class="contact-link-label">Ver en Google Maps</span>
                                         <span class="contact-link-value">Dirección del Liceo</span>
                                     </div>
                                 </a>
-
                                 <a href="http://www.liceovvh.cl/" target="_blank" class="contact-link">
                                     <div class="contact-link-text">
                                         <span class="contact-link-label">Sitio Web</span>
@@ -286,65 +200,51 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- Tarjeta Inacap -->
                     <div class="education-card">
                         <div class="card-header">
                             <h2 class="institution-name">Alternancia Inacap</h2>
                             <p class="degree">Programa de Alternancia</p>
                             <p class="period">2025</p>
                         </div>
-
                         <div class="card-body">
                             <div class="info-item">
-                                <!-- <span class="info-icon">💼</span> -->
                                 <div class="info-content">
                                     <div class="info-label">Tipo de Programa</div>
                                     <div class="info-text">Programa de formación dual combinando educación académica y experiencia práctica</div>
                                 </div>
                             </div>
-
                             <div class="info-item">
-                                <!-- <span class="info-icon">📍</span> -->
                                 <div class="info-content">
                                     <div class="info-label">Ubicación</div>
                                     <div class="info-text">La Granja, Región Metropolitana</div>
                                 </div>
                             </div>
                         </div>
-
                         <div class="contact-section">
                             <h3 class="contact-title">Información de Contacto</h3>
                             <div class="contact-links">
                                 <a href="mailto:informaciones@inacap.cl" class="contact-link">
-                                    <!-- <span class="contact-link-icon">📧</span> -->
                                     <div class="contact-link-text">
                                         <span class="contact-link-label">Correo Electrónico</span>
                                         <span class="contact-link-value">informaciones@inacap.cl</span>
                                     </div>
                                 </a>
-                                
-                                <a href="tel:800 20 25 20" class="contact-link">
-                                    <!-- <span class="contact-link-icon">📞</span> -->
+                                <a href="tel:800202520" class="contact-link">
                                     <div class="contact-link-text">
                                         <span class="contact-link-label">Teléfono</span>
                                         <span class="contact-link-value">800 20 25 20</span>
                                     </div>
                                 </a>
-                                
                                 <a href="https://maps.app.goo.gl/4bF84QJZX91fVjdA6" target="_blank" class="contact-link">
-                                    <!-- <span class="contact-link-icon">📍</span> -->
                                     <div class="contact-link-text">
                                         <span class="contact-link-label">Ver en Google Maps</span>
-                                        <span class="contact-link-value">Sedes La Granja Inacap</span>
+                                        <span class="contact-link-value">Sedes Inacap</span>
                                     </div>
                                 </a>
-                                
                                 <a href="https://www.inacap.cl/" target="_blank" class="contact-link">
-                                    <!-- <span class="contact-link-icon">🌐</span> -->
                                     <div class="contact-link-text">
                                         <span class="contact-link-label">Sitio Web</span>
-                                        <span class="contact-link-value">https://portal.inacap.cl/</span>
+                                        <span class="contact-link-value">www.inacap.cl</span>
                                     </div>
                                 </a>
                             </div>
@@ -356,17 +256,11 @@
 
         <!-- CERTIFICADOS -->
         <section id="certificados" class="seccion fondo-animado py-5">
-            <!-- <img src="resource/img/flor.jpg" class="img-fondo" alt="Fondo"> -->
             <div class="container">
                 <h1 class="titulo text-center mb-4">Certificaciones</h1>
-
                 <div class="certificates-grid">
-                    <!-- Certificado 1 -->
                     <div class="certificate-card">
-                        <div class="card-image">
-                            <img src="resource/img/flor.jpg" alt="Certificado 1">
-                        </div>
-
+                        <div class="card-image"><img src="resource/img/flor.jpg" alt="Certificado"></div>
                         <div class="card-overlay">
                             <div class="overlay-content">
                                 <h3 class="cert-title">Desarrollo Web Full Stack</h3>
@@ -382,7 +276,7 @@
                                     <div class="info-row">
                                         <span class="info-icon">📅</span>
                                         <div class="info-data">
-                                            <p class="info-label">Fecha de emisión</p>
+                                            <p class="info-label">Fecha</p>
                                             <p class="info-value">Enero 2024</p>
                                         </div>
                                     </div>
@@ -393,252 +287,23 @@
                                             <p class="info-value">120 horas</p>
                                         </div>
                                     </div>
-                                    <div class="info-row">
-                                        <span class="info-icon">🎯</span>
-                                        <div class="info-data">
-                                            <p class="info-label">Habilidades</p>
-                                            <p class="info-value">HTML, CSS, JavaScript, React, Node.js</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Certificado 2 -->
-                    <div class="certificate-card">
-                        <div class="card-image">
-                            <img src="resource/img/flor.jpg" alt="Certificado 2">
-                        </div>
-                        <div class="card-overlay">
-                            <div class="overlay-content">
-                                <h3 class="cert-title">Marketing Digital</h3>
-                                <div class="cert-divider"></div>
-                                <div class="cert-info">
-                                    <div class="info-row">
-                                        <span class="info-icon">🏛️</span>
-                                        <div class="info-data">
-                                            <p class="info-label">Institución</p>
-                                            <p class="info-value">Google</p>
-                                        </div>
-                                    </div>
-                                    <div class="info-row">
-                                        <span class="info-icon">📅</span>
-                                        <div class="info-data">
-                                            <p class="info-label">Fecha de emisión</p>
-                                            <p class="info-value">Marzo 2024</p>
-                                        </div>
-                                    </div>
-                                    <div class="info-row">
-                                        <span class="info-icon">⏱️</span>
-                                        <div class="info-data">
-                                            <p class="info-label">Duración</p>
-                                            <p class="info-value">40 horas</p>
-                                        </div>
-                                    </div>
-                                    <div class="info-row">
-                                        <span class="info-icon">🎯</span>
-                                        <div class="info-data">
-                                            <p class="info-label">Habilidades</p>
-                                            <p class="info-value">SEO, SEM, Analytics, Social Media</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Certificado 3 -->
-                    <div class="certificate-card">
-                        <div class="card-image">
-                            <img src="ruta/certificado3.jpg" alt="Certificado 3">
-                        </div>
-                        <div class="card-overlay">
-                            <div class="overlay-content">
-                                <h3 class="cert-title">Diseño UX/UI</h3>
-                                <div class="cert-divider"></div>
-                                <div class="cert-info">
-                                    <div class="info-row">
-                                        <span class="info-icon">🏛️</span>
-                                        <div class="info-data">
-                                            <p class="info-label">Institución</p>
-                                            <p class="info-value">Coursera</p>
-                                        </div>
-                                    </div>
-                                    <div class="info-row">
-                                        <span class="info-icon">📅</span>
-                                        <div class="info-data">
-                                            <p class="info-label">Fecha de emisión</p>
-                                            <p class="info-value">Mayo 2024</p>
-                                        </div>
-                                    </div>
-                                    <div class="info-row">
-                                        <span class="info-icon">⏱️</span>
-                                        <div class="info-data">
-                                            <p class="info-label">Duración</p>
-                                            <p class="info-value">80 horas</p>
-                                        </div>
-                                    </div>
-                                    <div class="info-row">
-                                        <span class="info-icon">🎯</span>
-                                        <div class="info-data">
-                                            <p class="info-label">Habilidades</p>
-                                            <p class="info-value">Figma, Wireframing, Prototipado, User Research</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Certificado 4 -->
-                    <div class="certificate-card">
-                        <div class="card-image">
-                            <img src="ruta/certificado4.jpg" alt="Certificado 4">
-                        </div>
-                        <div class="card-overlay">
-                            <div class="overlay-content">
-                                <h3 class="cert-title">Python para Data Science</h3>
-                                <div class="cert-divider"></div>
-                                <div class="cert-info">
-                                    <div class="info-row">
-                                        <span class="info-icon">🏛️</span>
-                                        <div class="info-data">
-                                            <p class="info-label">Institución</p>
-                                            <p class="info-value">IBM</p>
-                                        </div>
-                                    </div>
-                                    <div class="info-row">
-                                        <span class="info-icon">📅</span>
-                                        <div class="info-data">
-                                            <p class="info-label">Fecha de emisión</p>
-                                            <p class="info-value">Julio 2024</p>
-                                        </div>
-                                    </div>
-                                    <div class="info-row">
-                                        <span class="info-icon">⏱️</span>
-                                        <div class="info-data">
-                                            <p class="info-label">Duración</p>
-                                            <p class="info-value">60 horas</p>
-                                        </div>
-                                    </div>
-                                    <div class="info-row">
-                                        <span class="info-icon">🎯</span>
-                                        <div class="info-data">
-                                            <p class="info-label">Habilidades</p>
-                                            <p class="info-value">Python, Pandas, NumPy, Matplotlib</p>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Certificado 5 -->
-                    <div class="certificate-card">
-                        <div class="card-image">
-                            <img src="ruta/certificado4.jpg" alt="Certificado 4">
-                        </div>
-                        <div class="card-overlay">
-                            <div class="overlay-content">
-                                <h3 class="cert-title">Python para Data Science</h3>
-                                <div class="cert-divider"></div>
-                                <div class="cert-info">
-                                    <div class="info-row">
-                                        <span class="info-icon">🏛️</span>
-                                        <div class="info-data">
-                                            <p class="info-label">Institución</p>
-                                            <p class="info-value">IBM</p>
-                                        </div>
-                                    </div>
-                                    <div class="info-row">
-                                        <span class="info-icon">📅</span>
-                                        <div class="info-data">
-                                            <p class="info-label">Fecha de emisión</p>
-                                            <p class="info-value">Julio 2024</p>
-                                        </div>
-                                    </div>
-                                    <div class="info-row">
-                                        <span class="info-icon">⏱️</span>
-                                        <div class="info-data">
-                                            <p class="info-label">Duración</p>
-                                            <p class="info-value">60 horas</p>
-                                        </div>
-                                    </div>
-                                    <div class="info-row">
-                                        <span class="info-icon">🎯</span>
-                                        <div class="info-data">
-                                            <p class="info-label">Habilidades</p>
-                                            <p class="info-value">Python, Pandas, NumPy, Matplotlib</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Certificado 6 -->
-                    <div class="certificate-card">
-                        <div class="card-image">
-                            <img src="ruta/certificado4.jpg" alt="Certificado 4">
-                        </div>
-                        <div class="card-overlay">
-                            <div class="overlay-content">
-                                <h3 class="cert-title">Python para Data Science</h3>
-                                <div class="cert-divider"></div>
-                                <div class="cert-info">
-                                    <div class="info-row">
-                                        <span class="info-icon">🏛️</span>
-                                        <div class="info-data">
-                                            <p class="info-label">Institución</p>
-                                            <p class="info-value">IBM</p>
-                                        </div>
-                                    </div>
-                                    <div class="info-row">
-                                        <span class="info-icon">📅</span>
-                                        <div class="info-data">
-                                            <p class="info-label">Fecha de emisión</p>
-                                            <p class="info-value">Julio 2024</p>
-                                        </div>
-                                    </div>
-                                    <div class="info-row">
-                                        <span class="info-icon">⏱️</span>
-                                        <div class="info-data">
-                                            <p class="info-label">Duración</p>
-                                            <p class="info-value">60 horas</p>
-                                        </div>
-                                    </div>
-                                    <div class="info-row">
-                                        <span class="info-icon">🎯</span>
-                                        <div class="info-data">
-                                            <p class="info-label">Habilidades</p>
-                                            <p class="info-value">Python, Pandas, NumPy, Matplotlib</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <!-- Repite estructura para más certificados -->
                 </div>
             </div>
         </section>
 
         <!-- EXPERIENCIA -->
         <section id="experiencia" class="seccion fondo-animado py-5">
-            <!-- <img src="resource/img/flor.jpg" class="img-fondo" alt="Fondo"> -->
             <div class="container">
                 <h1 class="titulo">EXPERIENCIA</h1>
-
                 <div class="timeline">
-                    <!-- Experiencia 1 -->
                     <div class="timeline-item left">
                         <div class="timeline-content">
-                            <div class="timeline-icon">
-                                <span>💼</span>
-                            </div>
+                            <div class="timeline-icon"><span>💼</span></div>
                             <div class="content-card">
                                 <div class="card-header">
                                     <h2>Práctica Profesional</h2>
@@ -646,12 +311,8 @@
                                 </div>
                                 <div class="card-body">
                                     <p class="role">Desarrollador Front-End</p>
-                                    <p class="period">
-                                        <span class="date-badge">2023</span>
-                                    </p>
-                                    <p class="description">
-                                        Desarrollo front-end con Bootstrap y JavaScript para crear una experiencia de compra en línea intuitiva y responsive.
-                                    </p>
+                                    <p class="period"><span class="date-badge">2023</span></p>
+                                    <p class="description">Desarrollo front-end con Bootstrap y JavaScript para crear una experiencia de compra en línea intuitiva y responsive.</p>
                                     <div class="skills-tags">
                                         <span class="tag">HTML</span>
                                         <span class="tag">CSS</span>
@@ -663,68 +324,7 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- Experiencia 2 -->
-                    <div class="timeline-item right">
-                        <div class="timeline-content">
-                            <div class="timeline-icon">
-                                <span>🚀</span>
-                            </div>
-                            <div class="content-card">
-                                <div class="card-header">
-                                    <h2>Proyecto Personal</h2>
-                                    <span class="company">Portafolio Web</span>
-                                </div>
-                                <div class="card-body">
-                                    <p class="role">Desarrollador Full Stack</p>
-                                    <p class="period">
-                                        <span class="date-badge">2024</span>
-                                    </p>
-                                    <p class="description">
-                                        Diseño y desarrollo de portafolio personal con animaciones avanzadas y diseño responsive para mostrar proyectos y habilidades.
-                                    </p>
-                                    <div class="skills-tags">
-                                        <span class="tag">React</span>
-                                        <span class="tag">Node.js</span>
-                                        <span class="tag">CSS3</span>
-                                        <span class="tag">Git</span>
-                                    </div>
-                                </div>
-                                <div class="card-glow"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Experiencia 3 -->
-                    <div class="timeline-item left">
-                        <div class="timeline-content">
-                            <div class="timeline-icon">
-                                <span>🎨</span>
-                            </div>
-                            <div class="content-card">
-                                <div class="card-header">
-                                    <h2>Freelance</h2>
-                                    <span class="company">Diseño Web</span>
-                                </div>
-                                <div class="card-body">
-                                    <p class="role">Diseñador UI/UX</p>
-                                    <p class="period">
-                                        <span class="date-badge">2024 - Presente</span>
-                                    </p>
-                                    <p class="description">
-                                        Creación de interfaces de usuario atractivas y funcionales para diversos clientes, enfocándome en la experiencia del usuario.
-                                    </p>
-                                    <div class="skills-tags">
-                                        <span class="tag">Figma</span>
-                                        <span class="tag">Adobe XD</span>
-                                        <span class="tag">Photoshop</span>
-                                        <span class="tag">UX Design</span>
-                                    </div>
-                                </div>
-                                <div class="card-glow"></div>
-                            </div>
-                        </div>
-                    </div>
+                    <!-- Agrega más experiencias siguiendo la misma estructura -->
                     <div class="timeline-line"></div>
                 </div>
             </div>
@@ -732,118 +332,29 @@
 
         <!-- REFERENCIAS -->
         <section id="referencias" class="seccion fondo-animado py-5">
-            <!-- <img src="resource/img/flor.jpg" class="img-fondo" alt="Fondo"> -->
             <div class="container">
                 <h1 class="titulo">REFERENCIAS</h1>
-
                 <div class="references-grid">
-                    <!-- Referencia 1 -->
                     <div class="reference-card" onclick="toggleCard(this)">
                         <div class="card-front">
-                            <div class="profile-image">
-                                <img src="ruta/foto-persona1.jpg" alt="María González">
-                                <div class="image-overlay">
-                                </div>
-                            </div>
+                            <div class="profile-image"><img src="ruta/foto-persona1.jpg" alt="Referencia"></div>
                             <h3 class="reference-name">María González</h3>
                             <p class="reference-role">Gerente de Proyectos</p>
                         </div>
-
                         <div class="card-back">
                             <div class="back-header">
                                 <button class="close-btn" onclick="event.stopPropagation(); toggleCard(this.closest('.reference-card'))">✕</button>
                                 <h3>María González</h3>
-                                <p class="profession">Gerente de Proyectos - Tech Solutions SA</p>
+                                <p class="profession">Gerente de Proyectos - Tech Solutions</p>
                             </div>
-
                             <div class="back-content">
-                                <p class="intro">
-                                    "Trabajé directamente con [Tu Nombre] durante 2 años en proyectos de desarrollo web. Demostró excelentes habilidades técnicas y gran capacidad de trabajo en equipo."
-                                </p>
-
+                                <p class="intro">"Excelente profesional con gran capacidad técnica y trabajo en equipo."</p>
                                 <div class="contact-info">
                                     <div class="contact-item">
                                         <span class="contact-icon">📧</span>
                                         <div class="contact-details">
-                                            <label>Correo Electrónico</label>
-                                            <a href="mailto:maria.gonzalez@techsolutions.com" onclick="event.stopPropagation()">
-                                                maria.gonzalez@techsolutions.com
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="contact-item">
-                                        <span class="contact-icon">📱</span>
-                                        <div class="contact-details">
-                                            <label>Teléfono</label>
-                                            <a href="tel:+56912345678" onclick="event.stopPropagation()">
-                                                +56 9 1234 5678
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="contact-item">
-                                        <span class="contact-icon">🏢</span>
-                                        <div class="contact-details">
-                                            <label>Empresa</label>
-                                            <span>Tech Solutions SA</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Referencia 2 -->
-                    <div class="reference-card" onclick="toggleCard(this)">
-                        <div class="card-front">
-                            <div class="profile-image">
-                                <img src="ruta/foto-persona2.jpg" alt="Carlos Ramírez">
-                                <div class="image-overlay">
-                                </div>
-                            </div>
-                            <h3 class="reference-name">Carlos Ramírez</h3>
-                            <p class="reference-role">Director de Tecnología</p>
-                        </div>
-
-                        <div class="card-back">
-                            <div class="back-header">
-                                <button class="close-btn" onclick="event.stopPropagation(); toggleCard(this.closest('.reference-card'))">✕</button>
-                                <h3>Carlos Ramírez</h3>
-                                <p class="profession">Director de Tecnología - Digital Innovation</p>
-                            </div>
-
-                            <div class="back-content">
-                                <p class="intro">
-                                    "Excelente profesional con gran capacidad de aprendizaje. Su dedicación y creatividad en la resolución de problemas lo hacen un activo valioso para cualquier equipo."
-                                </p>
-
-                                <div class="contact-info">
-                                    <div class="contact-item">
-                                        <span class="contact-icon">📧</span>
-                                        <div class="contact-details">
-                                            <label>Correo Electrónico</label>
-                                            <a href="mailto:carlos.ramirez@digitalinnovation.cl" onclick="event.stopPropagation()">
-                                                carlos.ramirez@digitalinnovation.cl
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="contact-item">
-                                        <span class="contact-icon">📱</span>
-                                        <div class="contact-details">
-                                            <label>Teléfono</label>
-                                            <a href="tel:+56987654321" onclick="event.stopPropagation()">
-                                                +56 9 8765 4321
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="contact-item">
-                                        <span class="contact-icon">🏢</span>
-                                        <div class="contact-details">
-                                            <label>Empresa</label>
-                                            <span>Digital Innovation</span>
+                                            <label>Email</label>
+                                            <a href="mailto:maria@tech.com" onclick="event.stopPropagation()">maria@tech.com</a>
                                         </div>
                                     </div>
                                 </div>
@@ -856,15 +367,12 @@
 
         <!-- PORTAFOLIO -->
         <section id="portafolio" class="seccion fondo-animado py-5">
-            <!-- <img src="resource/img/flor.jpg" class="img-fondo" alt="Fondo"> -->
             <div class="container">
                 <h2 class="titulo text-center mb-4">Portafolio</h2>
-
                 <div class="projects-grid">
-                    <!-- Proyecto 1 -->
                     <div class="project-card">
                         <div class="card-image">
-                            <img src="ruta/proyecto1.jpg" alt="Página de Recetas Macabras">
+                            <img src="ruta/proyecto1.jpg" alt="Proyecto">
                             <div class="project-overlay">
                                 <div class="project-tags">
                                     <span class="tag">HTML</span>
@@ -875,51 +383,13 @@
                         </div>
                         <div class="card-content">
                             <div class="project-header">
-                                <h3 class="project-title">Página de Recetas Macabras</h3>
+                                <h3 class="project-title">Página de Recetas</h3>
                                 <span class="project-icon">🍴</span>
                             </div>
                             <p class="project-description">HTML, CSS, JS vanilla. Diseño gótico.</p>
                             <div class="card-footer">
-                                <a href="#" class="btn-repo">
-                                    <span class="btn-icon">📂</span>
-                                    Ver repo
-                                </a>
-                                <a href="#" class="btn-demo">
-                                    <span class="btn-icon">🚀</span>
-                                    Demo
-                                </a>
-                            </div>
-                        </div>
-                        <div class="card-glow"></div>
-                    </div>
-            
-                    <!-- Proyecto 2 -->
-                    <div class="project-card">
-                        <div class="card-image">
-                            <img src="ruta/proyecto3.jpg" alt="API del Clima Oscuro">
-                            <div class="project-overlay">
-                                <div class="project-tags">
-                                    <span class="tag">API</span>
-                                    <span class="tag">Bootstrap</span>
-                                    <span class="tag">Async/Await</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <div class="project-header">
-                                <h3 class="project-title">API del Clima Oscuro</h3>
-                                <span class="project-icon">🌙</span>
-                            </div>
-                            <p class="project-description">Consume API externa. Bootstrap.</p>
-                            <div class="card-footer">
-                                <a href="#" class="btn-repo">
-                                    <span class="btn-icon">📂</span>
-                                    Ver repo
-                                </a>
-                                <a href="#" class="btn-demo">
-                                    <span class="btn-icon">🚀</span>
-                                    Demo
-                                </a>
+                                <a href="#" class="btn-repo"><span class="btn-icon">📂</span>Ver repo</a>
+                                <a href="#" class="btn-demo"><span class="btn-icon">🚀</span>Demo</a>
                             </div>
                         </div>
                         <div class="card-glow"></div>
@@ -927,7 +397,6 @@
                 </div>
             </div>
         </section>
-
 
         <!-- CONTACTO -->
         <section id="contacto" class="seccion fondo-animado py-5">
@@ -1034,12 +503,10 @@
 
     </main>
     
-    <!-- Footer -->
-    <footer class="mi-footer bg-dark text-white text-center py-3">
-        <small class="final">Hecho con mucho café – <span id="yearActual"></span></small>
+    <footer class="mi-footer">
+        <small>Hecho con mucho café – <span id="yearActual"></span></small>
     </footer>
 
-    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="static/js/main.js"></script>
 </body>

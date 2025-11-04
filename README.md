@@ -25,7 +25,7 @@ El sitio integra CV + Portafolio con interactividad, diseño responsivo y despli
 - **GitHub Pages**: Hosting y despliegue automático
 
 # 📂 Estructura del Proyecto
-
+´´´
 Copy
 portafolio-nocturno/
 │   ├── index.html
@@ -38,6 +38,7 @@ portafolio-nocturno/
 │   │   └── video/
 │   └── README.md
 └── .gitignore
+´´´
 # 🧭 Secciones del Portafolio
 
 **Inicio** – bienvenida con foto circular animada

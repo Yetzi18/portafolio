@@ -13,15 +13,15 @@
     <!-- BARRA LATERAL -->
     <nav id="barraLateral" class="d-flex flex-column p-2">
         <a class="miniatura-nav" href="#inicio" style="background-image:url('resource/img/flor.jpg')" onclick="scrollASeccion(this)"><span>Inicio</span></a>
-        <a class="miniatura-nav" href="#sobreMi" style="background-image:url('img/nav/sobreMi.jpg')" onclick="scrollASeccion(this)"><span>Sobre mí</span></a>
-        <a class="miniatura-nav" href="#servicios" style="background-image:url('img/nav/servicios.jpg')" onclick="scrollASeccion(this)"><span>Servicios</span></a>
-        <a class="miniatura-nav" href="#habilidades" style="background-image:url('img/nav/habilidades.jpg')" onclick="scrollASeccion(this)"><span>Habilidades</span></a>
-        <a class="miniatura-nav" href="#educacion" style="background-image:url('img/nav/educacion.jpg')" onclick="scrollASeccion(this)"><span>Educación</span></a>
-        <a class="miniatura-nav" href="#certificados" style="background-image:url('img/nav/certificados.jpg')" onclick="scrollASeccion(this)"><span>Certificados</span></a>
-        <a class="miniatura-nav" href="#experiencia" style="background-image:url('img/nav/experiencia.jpg')" onclick="scrollASeccion(this)"><span>Experiencia</span></a>
-        <a class="miniatura-nav" href="#referencias" style="background-image:url('img/nav/referencias.jpg')" onclick="scrollASeccion(this)"><span>Referencias</span></a>
-        <a class="miniatura-nav" href="#portafolio" style="background-image:url('img/nav/portafolio.jpg')" onclick="scrollASeccion(this)"><span>Portafolio</span></a>
-        <a class="miniatura-nav" href="#contacto" style="background-image:url('img/nav/contacto.jpg')" onclick="scrollASeccion(this)"><span>Contacto</span></a>
+        <a class="miniatura-nav" href="#sobreMi" style="background-image:url('resource/img/flor.jpg')" onclick="scrollASeccion(this)"><span>Sobre mí</span></a>
+        <a class="miniatura-nav" href="#servicios" style="background-image:url('resource/img/flor.jpg')" onclick="scrollASeccion(this)"><span>Servicios</span></a>
+        <a class="miniatura-nav" href="#habilidades" style="background-image:url('resource/img/flor.jpg')" onclick="scrollASeccion(this)"><span>Habilidades</span></a>
+        <a class="miniatura-nav" href="#educacion" style="background-image:url('resource/img/flor.jpg')" onclick="scrollASeccion(this)"><span>Educación</span></a>
+        <a class="miniatura-nav" href="#certificados" style="background-image:url('resource/img/flor.jpg')" onclick="scrollASeccion(this)"><span>Certificados</span></a>
+        <a class="miniatura-nav" href="#experiencia" style="background-image:url('resource/img/flor.jpg')" onclick="scrollASeccion(this)"><span>Experiencia</span></a>
+        <a class="miniatura-nav" href="#referencias" style="background-image:url('resource/img/flor.jpg')" onclick="scrollASeccion(this)"><span>Referencias</span></a>
+        <a class="miniatura-nav" href="#portafolio" style="background-image:url('resource/img/flor.jpg')" onclick="scrollASeccion(this)"><span>Portafolio</span></a>
+        <a class="miniatura-nav" href="#contacto" style="background-image:url('resource/img/flor.jpg')" onclick="scrollASeccion(this)"><span>Contacto</span></a>
     </nav>
 
     <main id="contenidoPrincipal">
@@ -646,31 +646,38 @@
                 <div class="projects-grid">
                     <div class="project-card">
                         <div class="card-image">
-                            <img src="ruta/proyecto1.jpg" alt="Proyecto">
+                            <img src="resource/img/asis.png" alt="Proyecto Asist IoT">
+                            <div class="project-tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">JavaScript</span>
+                            </div>
+
+                            <!-- Contenido oculto que aparece al hacer hover -->
                             <div class="project-overlay">
-                                <div class="project-tags">
-                                    <span class="tag">HTML</span>
-                                    <span class="tag">CSS</span>
-                                    <span class="tag">JavaScript</span>
+                                <div class="card-content">
+                                    <div class="project-header">
+                                        <h3 class="project-title">Asist IoT</h3>
+                                    </div>
+                                    <p class="project-description">
+                                        Plataforma IoT para monitoreo de salud en tiempo real. Integración con sensores inteligentes.
+                                    </p>
+                                    <div class="card-footer">
+                                        <a href="https://github.com/Yetzi18/Interfaz_Cabina_User" target="_blank" class="btn-repo">
+                                            <span class="btn-icon">📂</span> Ver repositorio
+                                        </a>
+                                        <a href="https://asistiot.netlify.app/" target="_blank" class="btn-demo">
+                                            <span class="btn-icon">🚀</span> Demo
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="card-content">
-                            <div class="project-header">
-                                <h3 class="project-title">Página de Recetas</h3>
-                                <span class="project-icon">🍴</span>
-                            </div>
-                            <p class="project-description">HTML, CSS, JS vanilla. Diseño gótico.</p>
-                            <div class="card-footer">
-                                <a href="#" class="btn-repo"><span class="btn-icon">📂</span>Ver repo</a>
-                                <a href="#" class="btn-demo"><span class="btn-icon">🚀</span>Demo</a>
-                            </div>
-                        </div>
-                        <div class="card-glow"></div>
                     </div>
                 </div>
             </div>
         </section>
+
 
         <!-- CONTACTO -->
         <section id="contacto" class="seccion fondo-animado py-5">

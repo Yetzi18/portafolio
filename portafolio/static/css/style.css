@@ -830,6 +830,107 @@ main { flex: 1; }
     opacity: 1;
     animation: rotateGlow 8s linear infinite;
 }
+/* jdjdj */
+.project-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.card-image img {
+    width: 100%;
+    border-radius: 15px;
+    display: block;
+}
+
+/* Etiquetas visibles siempre */
+.project-tags {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    gap: 8px;
+    z-index: 3;
+}
+
+.tag {
+    background-color: rgba(73, 2, 6, 0.7);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+/* Overlay oculto por defecto */
+.project-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(16, 14, 17, 0.9);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+    border-radius: 15px;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Mostrar overlay al pasar el mouse */
+.project-card:hover .project-overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Contenido dentro del overlay */
+.card-content {
+    max-width: 90%;
+}
+
+.project-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.project-description {
+    margin: 10px 0;
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+.card-footer {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn-repo,
+.btn-demo,
+.btn-ver-proyecto {
+    background: #490206;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.btn-repo:hover,
+.btn-demo:hover,
+.btn-ver-proyecto:hover {
+    background: #2c0001;
+}
+
+
+
 
 /* CONTACTO */
 .contact-wrapper {
@@ -1257,3 +1358,8 @@ main { flex: 1; }
     .cert-title { font-size: 1.3em; }
     .info-row { margin-bottom: 15px; }
 }
+
+
+
+
+

@@ -1,7 +1,5 @@
 # 🕸️ Portafolio - Yetzibel Gonzalez
 
-https://github.com/Yetzi18/portafolio
-
 # 📋 Descripción
 Portafolio web profesional de estilo nocturno-vino desarrollado como proyecto de término para la asignatura Programación Web del Liceo Comercial Vate Vicente Huidobro.
 El sitio integra CV + Portafolio con interactividad, diseño responsivo y despliegue en GitHub Pages, demostrando dominio de HTML, CSS, JavaScript, Bootstrap y Git.
